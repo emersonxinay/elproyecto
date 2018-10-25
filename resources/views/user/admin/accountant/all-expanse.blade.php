@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('title')
-    All Expanse
+    Gastos Totales
 @endsection
 
 @section('content')
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="{{url('/add-expense')}}" class="btn btn-default waves-effect">New Expense <span
+                <a href="{{url('/add-expense')}}" class="btn btn-default waves-effect">Nuevo Gasto <span
                             class="m-l-5"></span></a>
             </div>
 
@@ -16,16 +16,16 @@
                 Expanse {{config('restaurant.currency.symbol')}} {{number_format($office_expanse->sum('expanse'),2)}} {{config('restaurant.currency.currency')}}</h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li>
-                    <a href="#">Accounting</a>
+                    <a href="#">Contabilidad</a>
                 </li>
                 <li class="active">
-                    Expanse
+                    Gastos
                 </li>
                 <li class="active">
-                    All Expanse
+                    Todos los Gastos
                 </li>
             </ol>
         </div>

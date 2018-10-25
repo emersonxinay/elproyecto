@@ -6,63 +6,63 @@
         <div id="sidebar-menu">
             <ul>
 
-                <li class="text-muted menu-title">Navigation</li>
+                <li class="text-muted menu-title">Opciones</li>
 
                 <li class="has_sub">
-                    <a href="{{url('/home')}}" class="waves-effect"><i class="ti-home"></i> <span> Dashboard </span> </a>
+                    <a href="{{url('/home')}}" class="waves-effect"><i class="ti-home"></i> <span> Panel </span> </a>
                 </li>
 
                 <li class="has_sub">
-                    <a href="javascript:void(0);" class="waves-effect"><i class="icon icon-chart"></i> <span> Reports </span> <span class="menu-arrow"></span> </a>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="icon icon-chart"></i> <span> Reportes </span> <span class="menu-arrow"></span> </a>
                     <ul class="list-unstyled">
-                        <li><a href="{{url('/kitchen-stat')}}">Kitchen</a></li>
-                        <li><a href="{{url('/waiter-stat')}}">Waiter</a></li>
-                        <li><a href="{{url('/dish-stat')}}">Dish</a></li>
+                        <li><a href="{{url('/kitchen-stat')}}">Cocina</a></li>
+                        <li><a href="{{url('/waiter-stat')}}">Mozos</a></li>
+                        <li><a href="{{url('/dish-stat')}}">Platos</a></li>
                     </ul>
                 </li>
 
 
                 <li class="has_sub">
-                    <a href="javascript:void(0);" class="waves-effect"><i class="icon icon-fire"></i> <span> Kitchen </span> <span class="menu-arrow"></span> </a>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="icon icon-fire"></i> <span> Cocina </span> <span class="menu-arrow"></span> </a>
                     <ul class="list-unstyled">
-                        <li><a href="{{url('/live-kitchen')}}">Live Kitchen</a></li>
+                        <li><a href="{{url('/live-kitchen')}}">Cocinando</a></li>
                         {{--<li><a href="{{url('/kitchen-stat')}}">Kitchen Statistics</a></li>--}}
                     </ul>
                 </li>
 
                 <li class="has_sub">
-                    <a href="javascript:void(0);" class="waves-effect"><i class="ti-notepad"></i> <span> Orders </span> <span class="menu-arrow"></span> </a>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="ti-notepad"></i> <span> Ordenes </span> <span class="menu-arrow"></span> </a>
                     <ul class="list-unstyled">
-                        <li><a href="{{url('/new-order')}}">New Order</a></li>
-                        <li><a href="{{url('/all-order')}}">All Order</a></li>
-                        <li><a href="{{url('/non-paid-order')}}">Non paid Order</a></li>
+                        <li><a href="{{url('/new-order')}}">Nueva Orden</a></li>
+                        <li><a href="{{url('/all-order')}}">Lista de Ordenes</a></li>
+                        <li><a href="{{url('/non-paid-order')}}">Ordenes No Pagadas</a></li>
                     </ul>
                 </li>
 
 
 
                 <li class="has_sub">
-                    <a href="javascript:void(0);" class="waves-effect"><i class="ti-truck"></i> <span> Supplier </span> <span class="menu-arrow"></span> </a>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="ti-truck"></i> <span> Proveedor </span> <span class="menu-arrow"></span> </a>
                     <ul class="list-unstyled">
-                        <li><a href="{{ url('/add-supplier') }}">Add Supplier</a></li>
-                        <li><a href="{{ url('/all-supplier') }}">All Supplier</a></li>
+                        <li><a href="{{ url('/add-supplier') }}">Agregar Proveedor</a></li>
+                        <li><a href="{{ url('/all-supplier') }}">Lista Proveedores</a></li>
                     </ul>
                 </li>
 
                 <li class="has_sub">
-                    <a href="javascript:void(0);" class="waves-effect {{isset($account_menu) ? 'active' : ''}}"><i class="icon icon-calculator"></i><span> Accounting </span> <span class="menu-arrow"></span></a>
+                    <a href="javascript:void(0);" class="waves-effect {{isset($account_menu) ? 'active' : ''}}"><i class="icon icon-calculator"></i><span> Contabilidad </span> <span class="menu-arrow"></span></a>
                     <ul>
                         <li class="has_sub">
-                            <a href="javascript:void(0);" class="waves-effect"><span>Expense</span>  <span class="menu-arrow"></span></a>
+                            <a href="javascript:void(0);" class="waves-effect"><span>Gastos</span>  <span class="menu-arrow"></span></a>
                             <ul style="">
                                 {{--<li><a href="{{url('/new-purses')}}"><span>New Purses</span></a></li>--}}
-                                <li><a href="{{url('/add-expense')}}"><span>Add Expense</span></a></li>
-                                <li><a href="{{url('/all-expanse')}}"><span>All Expense</span></a></li>
+                                <li><a href="{{url('/add-expense')}}"><span>Agregar Gastos</span></a></li>
+                                <li><a href="{{url('/all-expanse')}}"><span>Todos los Gastos</span></a></li>
                             </ul>
                         </li>
 
                         <li>
-                            <a href="{{url('/all-income')}}"><span>Income</span></a>
+                            <a href="{{url('/all-income')}}"><span>Ingresos</span></a>
                         </li>
 
                     </ul>
@@ -70,47 +70,47 @@
                 </li>
 
                 <li class="has_sub">
-                    <a href="javascript:void(0);" class="waves-effect"><i class="ti-menu-alt"></i><span>Tables Management</span> <span class="menu-arrow"></span></a>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="ti-menu-alt"></i><span>Gestion de Mesas</span> <span class="menu-arrow"></span></a>
                     <ul class="list-unstyled">
-                        <li><a href="{{url('/add-table')}}">Add Tables</a></li>
-                        <li><a href="{{url('/all-table')}}">All Table</a></li>
+                        <li><a href="{{url('/add-table')}}">Agregar Mesa</a></li>
+                        <li><a href="{{url('/all-table')}}">Lista de Mesas</a></li>
                     </ul>
                 </li>
 
                 <li class="has_sub">
-                    <a href="javascript:void(0);" class="waves-effect"><i class="ti-package"></i><span> Stock Management </span><span class="menu-arrow"></span></a>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="ti-package"></i><span> Stock </span><span class="menu-arrow"></span></a>
                     <ul class="list-unstyled">
-                        <li><a href="{{url('/new-purses')}}">New Purses</a></li>
-                        <li><a href="{{url('/all-purses')}}">All Purses</a></li>
-                        <li><a href="{{url('/add-item')}}">Add Item</a></li>
-                        <li><a href="{{url('/all-item')}}">All Stock</a></li>
+                        <li><a href="{{url('/new-purses')}}">Nuevo Producto</a></li>
+                        <li><a href="{{url('/all-purses')}}">Todos los Productos</a></li>
+                        <li><a href="{{url('/add-item')}}">Agregar Item</a></li>
+                        <li><a href="{{url('/all-item')}}">Todo el Stock</a></li>
                     </ul>
                 </li>
 
                 <li class="has_sub">
-                    <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-cutlery"></i><span> Dish </span> <span class="menu-arrow"></span></a>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-cutlery"></i><span> Platos </span> <span class="menu-arrow"></span></a>
                     <ul class="list-unstyled">
-                        <li><a href="{{url('/add-dish')}}">Add Dish</a></li>
-                        <li><a href="{{url('/all-dish')}}">All Dish</a></li>
+                        <li><a href="{{url('/add-dish')}}">Agregar Plato</a></li>
+                        <li><a href="{{url('/all-dish')}}">Todos los Platos</a></li>
                     </ul>
                 </li>
 
                 <li class="text-muted menu-title">More</li>
 
                 <li class="has_sub">
-                    <a href="javascript:void(0);" class="waves-effect"><i class="icon icon-people"></i><span> Employee </span> <span class="menu-arrow"></span></a>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="icon icon-people"></i><span> Colaboradores </span> <span class="menu-arrow"></span></a>
                     <ul class="list-unstyled">
-                        <li><a href="{{url('/add-employee')}}">Add Employee</a></li>
-                        <li><a href="{{url('/all-employee')}}">All Employee</a></li>
+                        <li><a href="{{url('/add-employee')}}">Agregar Colaborador</a></li>
+                        <li><a href="{{url('/all-employee')}}">Colaboradores</a></li>
                     </ul>
                 </li>
 
                 <li class="has_sub">
-                    <a href="javascript:void(0);" class="waves-effect"><i class="icon icon-settings"></i><span> Settings </span> <span class="menu-arrow"></span></a>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="icon icon-settings"></i><span> Configuracion </span> <span class="menu-arrow"></span></a>
                     <ul class="list-unstyled">
-                        <li><a href="{{url('/all-product-type')}}">Product Type Setting</a></li>
-                        <li><a href="{{url('/all-unit')}}">Unit Setting</a></li>
-                        <li><a href="{{url('/app-settings')}}">App Setting</a></li>
+                        <li><a href="{{url('/all-product-type')}}">Tipo de Producto</a></li>
+                        <li><a href="{{url('/all-unit')}}">Unidad</a></li>
+                        <li><a href="{{url('/app-settings')}}">Aplicacion</a></li>
                     </ul>
                 </li>
 

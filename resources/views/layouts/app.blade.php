@@ -59,7 +59,7 @@
 </div>
 
 <footer class="footer">
-    Restulator © 2017. All rights reserved <a href="http://github.com/kmrifat" target="_blank">K M Rifat ul alom</a>
+    Copyright © 2015-<?php echo date("Y"); ?> <a href="https://www.imaginaticsperu.com" target="_blank">Imaginatics Peru.</a> Todos los derechos reservados.
 </footer>
 </body>
 </html>

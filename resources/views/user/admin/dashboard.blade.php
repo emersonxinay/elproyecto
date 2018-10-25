@@ -16,7 +16,7 @@
                         <?php $orders = \App\Model\OrderDetails::where('created_at','like',\Carbon\Carbon::today()->format('Y-m-d').'%')->get() ?>
                             {{config('restaurant.currency.symbol')}}  {{number_format($orders->sum('gross_price'),1)}} {{config('restaurant.currency.currency')}}
                     </b></h3>
-                <p class="text-muted">Today's Sell</p>
+                <p class="text-muted">Ingresos de Hoy</p>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -32,7 +32,7 @@
                         <?php $purses = \App\Model\PursesProduct::where('created_at','like',\Carbon\Carbon::today()->format('Y-m-d').'%')->get() ?>
                             {{config('restaurant.currency.symbol')}} {{number_format($purses->sum('gross_price'),1)}} {{config('restaurant.currency.currency')}}
                     </b></h3>
-                <p class="text-muted">Today's Purses</p>
+                <p class="text-muted">Egresos de Hoy</p>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -48,7 +48,7 @@
                         <?php $order = \App\Model\Order::where('created_at','like',\Carbon\Carbon::today()->format('Y-m-d').'%')->get() ?>
                     {{count($order)}}
                     </b></h3>
-                <p class="text-muted">Today's Order</p>
+                <p class="text-muted">Ordenes de Hoy</p>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -58,7 +58,7 @@
 
 <div class="col-lg-12">
     <div class="card-box">
-        <h4 class="text-dark header-title m-t-0">Dish Sells today</h4>
+        <h4 class="text-dark header-title m-t-0">Platos Atendidos Hoy</h4>
         <div class="text-center">
 
         </div>
@@ -71,7 +71,7 @@
 
 <div class="col-lg-12">
     <div class="card-box">
-        <h4 class="text-dark header-title m-t-0">Daily Order by Waiter</h4>
+        <h4 class="text-dark header-title m-t-0">Orden Diaria Por Mozo</h4>
             <div class="text-center"></div>
             <div id="dailyOrderByWaiter" style="height: 303px;">
 
@@ -82,7 +82,7 @@
 
 <div class="col-lg-12">
     <div class="card-box">
-        <h4 class="text-dark header-title m-t-0">Daily Order by Kitchen</h4>
+        <h4 class="text-dark header-title m-t-0">Orden Diaria Por Cocinero</h4>
         <div class="text-center"></div>
         <div id="dailyOrderByKitchen" style="height: 303px;">
 

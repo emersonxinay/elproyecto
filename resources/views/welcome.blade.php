@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Restulator Home</title>
+    <title>Bienvenido a Mikhuna</title>
     @include('assets.css')
     <style>
         .badge{
@@ -43,10 +43,10 @@
                 @if (Route::has('login'))
                 <ul class="nav navbar-nav hidden-xs pull-right">
                     @if (Auth::check())
-                        <li><a href="{{url('/home')}}" class="waves-effect waves-light">Home</a></li>
+                        <li><a href="{{url('/home')}}" class="waves-effect waves-light">Inicio</a></li>
                     @else
-                    <li><a href="{{route('login')}}" class="waves-effect waves-light">Login</a></li>
-                    <li><a href="{{route('register')}}" class="waves-effect waves-light">Join</a></li>
+                    <li><a href="{{route('login')}}" class="waves-effect waves-light">Inicia Sesion</a></li>
+                    <li><a href="{{route('register')}}" class="waves-effect waves-light">Crear Cuenta</a></li>
                     @endif
 
                 </ul>
