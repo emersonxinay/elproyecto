@@ -10,7 +10,7 @@
         <div class="col-sm-12">
             <div class="card-box" id="app">
                 <center>
-                    <h4 class="m-t-0 header-title"><b>Purses</b></h4>
+                    <h4 class="m-t-0 header-title"><b>Producto</b></h4>
                     <p>
 
                     </p>
@@ -29,60 +29,61 @@
                                 {{--<input type="text" name="purses_id" value="2541" class="form-control">--}}
                                 {{--</div>--}}
 
-                                <label for="" class="col-md-2 control-label">Select Supplier</label>
+                                <label for="" class="col-md-2 control-label">Seleccione Proveedor</label>
                                 <div class="col-md-2">
                                     <select name="supplier_id" id="supplier_id" class="form-control select2" required>
-                                        <option value="">Select One</option>
+                                        <option value="">Seleccione Uno</option>
                                         @foreach($suppliers as $supplier)
                                             <option value="{{$supplier->id}}">{{$supplier->name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
 
-                                <label for="" class="col-md-1 control-label">Select Product</label>
+                                <label for="" class="col-md-1 control-label">Seleccione Producto</label>
                                 <div class="col-md-3">
                                     <select name="product_id" id="product" class="form-control" required>
-                                        <option value="">Select One</option>
+                                        <option value="">Seleccione Uno</option>
                                         @foreach($products as $product)
                                             <option value="{{$product->id}}">{{$product->product_name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
 
-                                <label class="col-md-1 control-label" for="example-email">Quantity :</label>
+                                <label class="col-md-1 control-label" for="example-email">Cantidad :</label>
                                 <div class="col-md-2">
                                     <div class="input-group ">
                                         <input type="text" id="quantity" name="quantity" class="form-control"
-                                               placeholder="Quantity">
-                                        <span class="input-group-addon" id="unit">Unit</span>
+                                               placeholder="Cantidad">
+                                        <span class="input-group-addon" id="unit">Unidad</span>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-2 control-label" for="example-email">Unit Price :</label>
+                                <label class="col-md-2 control-label" for="example-email">Precio por Unidad :</label>
                                 <div class="col-md-2">
                                     <input type="number" min="1" name="unit_price" class="form-control"
-                                           placeholder="Unit Price"
+                                           placeholder="Precio por Unidad"
                                            parsley-trigger="change" maxlength="50" required id="unitPrice">
                                 </div>
-                                <label for="" class="col-md-1 control-label">Child unit price</label>
+                                <label for="" class="col-md-1 control-label">Precio(Unidad Hijo)</label>
+                                <!--Child unit price-->
                                 <div class="col-md-3">
                                     <div class="input-group">
                                         <input disabled type="text" id="child_unit_price" name="quantity"
                                                class="form-control"
-                                               placeholder="Child Unit Price">
-                                        <span class="input-group-addon" id="child_unit">Unit</span>
+                                               placeholder="Precio Unitario">
+                                        <span class="input-group-addon" id="child_unit">Unidad</span>
                                     </div>
                                 </div>
 
-                                <label class="col-md-1 control-label" for="example-email">Gross Price</label>
+                                <label class="col-md-1 control-label" for="example-email">Precio Bruto</label>
                                 <div class="col-md-2">
                                     <div class="input-group">
                                         <span class="input-group-addon"
                                               id="">{{config('restaurant.currency.symbol')}}</span>
                                         <input disabled type="number" min="1" name="product_name" class="form-control"
-                                               placeholder="Gross Price"
+                                               placeholder="Bruto"
                                                parsley-trigger="change" maxlength="50" required id="grossPrice">
                                         <span class="input-group-addon"
                                               id="">{{config('restaurant.currency.currency')}}</span>
@@ -96,7 +97,7 @@
                                 <label class="col-md-2 control-label"></label>
                                 <div class="col-md-10">
                                     <button type="submit" class="btn btn-purple">
-                                        Purses Now
+                                        Nuevo Producto
 
                                     </button>
                                 </div>
@@ -111,13 +112,13 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Supplier</th>
-                                <th>Product</th>
-                                <th width="100px">Quantity</th>
-                                <th width="150px">Unit Price</th>
-                                <th>Child Unit Price</th>
-                                <th>Gross Price</th>
-                                <th width="95px">Action</th>
+                                <th>Proveedor</th>
+                                <th>Producto</th>
+                                <th width="100px">Cantidad</th>
+                                <th width="150px">Precio Unitario</th>
+                                <th>Precio(Unidad Hijo)</th>
+                                <th>Precio Bruto</th>
+                                <th width="95px">Acciones </th>
                             </tr>
                             </thead>
                             <tbody id="pursesDetailsRender">

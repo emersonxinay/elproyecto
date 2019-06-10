@@ -9,20 +9,20 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="{{url('/new-order')}}" class="btn btn-default waves-effect">New Order <span
+                <a href="{{url('/new-order')}}" class="btn btn-default waves-effect">Nueva Orden <span
                             class="m-l-5"></span></a>
             </div>
 
-            <h4 class="page-title">Non Paid Orders</h4>
+            <h4 class="page-title">Ordenes no Pagadas</h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li>
-                    <a href="#">Order</a>
+                    <a href="#">Orden</a>
                 </li>
                 <li class="active">
-                    Non Paidn Order
+                    Lista de Ordenes no Pagadas
                 </li>
             </ol>
         </div>
@@ -33,13 +33,13 @@
                width="100%">
             <thead>
             <tr>
-                <th>Order No</th>
-                <th>Table No</th>
-                <th>Served By</th>
-                <th>Order Value</th>
-                <th>Kitchen</th>
-                <th>Status</th>
-                <th width="120px">Action</th>
+                <th>Pedido No</th>
+                <th>Mesa No</th>
+                <th>Servido Por</th>
+                <th>Precio</th>
+                <th>Cocina</th>
+                <th>Estado</th>
+                <th width="120px">Acciones</th>
             </tr>
             </thead>
             <?php $count = 1; ?>
@@ -131,6 +131,10 @@
     <script>
         $(document).ready(function () {
             $("#datatable-responsive").DataTable({
+
+                "language": {
+                  "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                },
                 order: [0, 'desc']
             });
         })

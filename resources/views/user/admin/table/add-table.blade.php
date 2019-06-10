@@ -9,19 +9,19 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="{{url('/all-table')}}" class="btn btn-default waves-effect">All Table <span class="m-l-5"></span></a>
+                <a href="{{url('/all-table')}}" class="btn btn-default waves-effect">Añadir Mesa <span class="m-l-5"></span></a>
             </div>
 
-            <h4 class="page-title">Add Table </h4>
+            <h4 class="page-title">Agregar Mesa </h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li class="active">
-                    Table Management
+                    Control de Mesas
                 </li>
                 <li class="active">
-                    Add table
+                    Añadir Mesa
                 </li>
             </ol>
         </div>
@@ -37,18 +37,18 @@
                             {{csrf_field()}}
 
                             <div class="form-group">
-                                <label class="col-md-2 control-label">Table :</label>
+                                <label class="col-md-2 control-label">Mesa :</label>
                                 <div class="col-md-8">
                                     <input type="text" name="table_no" class="form-control" value=""
-                                           placeholder="Table No / Table Name" parsley-trigger="change" maxlength="50" required>
+                                           placeholder="No Mesa /Nombre de la Mesa" parsley-trigger="change" maxlength="50" required>
 
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-2 control-label">Capacity :</label>
+                                <label class="col-md-2 control-label">Capacidad :</label>
                                 <div class="col-md-8">
                                     <input type="number" min="1" name="table_capacity" class="form-control" value=""
-                                           placeholder="Table capacity" parsley-trigger="change" maxlength="50" required>
+                                           placeholder="Capacidad de la Mesa" parsley-trigger="change" maxlength="50" required>
 
                                 </div>
                             </div>
@@ -56,7 +56,7 @@
                             <div class="form-group">
                                 <label class="col-md-2 control-label"></label>
                                 <div class="col-md-10">
-                                    <button type="submit" class="ladda-button btn btn-purple" data-style="expand-right">Save Table
+                                    <button type="submit" class="ladda-button btn btn-purple" data-style="expand-right">Guardar 
 
                                     </button>
                                 </div>

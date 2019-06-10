@@ -8,19 +8,19 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="{{url('/add-employee')}}" class="btn btn-default waves-effect">Add Employee <span class="m-l-5"></span></a>
+                <a href="{{url('/add-employee')}}" class="btn btn-default waves-effect">Añadir Empleado <span class="m-l-5"></span></a>
             </div>
 
-            <h4 class="page-title">All Employee </h4>
+            <h4 class="page-title">Todos los Empleados </h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li class="active">
-                    Employee
+                    Empleado
                 </li>
                 <li class="active">
-                    All Employee
+                    Todos los Empleados
                 </li>
             </ol>
         </div>
@@ -32,10 +32,10 @@
             <thead>
             <tr>
                 <th>#</th>
-                <th>Photo</th>
-                <th>Info</th>
-                <th>Role</th>
-                <th width="20px">Action</th>
+                <th>Foto</th>
+                <th>Informacion</th>
+                <th>Rol</th>
+                <th width="20px">Actiones</th>
             </tr>
             </thead>
             <?php $count = 1; ?>
@@ -129,7 +129,11 @@
 @section('extra-js')
     <script>
         $(document).ready(function () {
-            $("#datatable-responsive").DataTable();
+            $("#datatable-responsive").DataTable({
+                "language": {
+                  "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                },
+            });
         })
     </script>
 

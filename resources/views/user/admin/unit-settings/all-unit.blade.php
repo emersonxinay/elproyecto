@@ -9,19 +9,19 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="{{url('/add-unit')}}" class="btn btn-default waves-effect">Add Unit <span class="m-l-5"><i class="fa fa-plus"></i></span></a>
+                <a href="{{url('/add-unit')}}" class="btn btn-default waves-effect">Agregar Unidad <span class="m-l-5"><i class="fa fa-plus"></i></span></a>
             </div>
 
-            <h4 class="page-title">Unites</h4>
+            <h4 class="page-title">Unidad</h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li class="active">
-                    Settings
+                    Ajustes
                 </li>
                 <li class="active">
-                    Unit Settings
+                    Ajustes de la Unidad
                 </li>
             </ol>
         </div>
@@ -34,9 +34,9 @@
             <thead>
             <tr>
                 <th>#</th>
-                <th>Unit</th>
-                <th>Info</th>
-                <th width="80px">Action</th>
+                <th>Unidad</th>
+                <th>Informacion</th>
+                <th width="80px">Actiones</th>
             </tr>
             </thead>
             <?php $count = 1; ?>
@@ -76,7 +76,11 @@
 @section('extra-js')
     <script>
         $(document).ready(function () {
-            $("#datatable-responsive").DataTable();
+            $("#datatable-responsive").DataTable({
+                "language": {
+                  "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                },
+            });
         })
     </script>
 

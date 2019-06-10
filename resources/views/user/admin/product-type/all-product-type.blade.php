@@ -9,19 +9,19 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="{{url('/add-product-type')}}" class="btn btn-default waves-effect">Add Product Types <span class="m-l-5"></span></a>
+                <a href="{{url('/add-product-type')}}" class="btn btn-default waves-effect">Agregar tipo de Producto <span class="m-l-5"></span></a>
             </div>
 
-            <h4 class="page-title">Product Types</h4>
+            <h4 class="page-title">Tipo de Producto</h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li class="active">
-                    Settings
+                    Ajustes
                 </li>
                 <li class="active">
-                    All Product Type
+                    Todos los tipos de Producto
                 </li>
             </ol>
         </div>
@@ -34,10 +34,10 @@
             <thead>
             <tr>
                 <th>#</th>
-                <th>Product Type</th>
-                <th>Added by</th>
-                <th>Status</th>
-                <th width="80px">Action</th>
+                <th>Tipo de Producto</th>
+                <th>Agregado por</th>
+                <th>Estado</th>
+                <th width="80px">Acciones</th>
             </tr>
             </thead>
             <?php $count = 1; ?>
@@ -81,7 +81,11 @@
 
     <script>
         $(document).ready(function () {
-            $("#datatable-responsive").DataTable();
+            $("#datatable-responsive").DataTable({
+                 "language": {
+                  "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                },
+            });
         });
     </script>
 

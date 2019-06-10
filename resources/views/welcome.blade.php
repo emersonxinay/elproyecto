@@ -28,7 +28,7 @@
         <div class="text-center">
             <a href="{{url('/')}}" class="logo">
                 <i class="icon-c-logo my-logo">R</i>
-                <span class="my-logo">Restulator</span>
+                <span class="my-logo">Restaurant Pepita</span>
             </a>
 
         </div>
@@ -45,7 +45,7 @@
                     @if (Auth::check())
                         <li><a href="{{url('/home')}}" class="waves-effect waves-light">Inicio</a></li>
                     @else
-                    <li><a href="{{route('login')}}" class="waves-effect waves-light">Inicia Sesion</a></li>
+                    <li><a href="{{route('login')}}" class="waves-effect waves-light">Ingresar</a></li>
                     <li><a href="{{route('register')}}" class="waves-effect waves-light">Crear Cuenta</a></li>
                     @endif
 

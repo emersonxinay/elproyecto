@@ -12,8 +12,8 @@
                             class="m-l-5"></span></a>
             </div>
 
-            <h4 class="page-title">All
-                Expanse {{config('restaurant.currency.symbol')}} {{number_format($office_expanse->sum('expanse'),2)}} {{config('restaurant.currency.currency')}}</h4>
+            <h4 class="page-title">Todos los Gastos
+                {{config('restaurant.currency.symbol')}} {{number_format($office_expanse->sum('expanse'),2)}} {{config('restaurant.currency.currency')}}</h4>
             <ol class="breadcrumb">
                 <li>
                     <a href="{{url('/')}}">Inicio</a>

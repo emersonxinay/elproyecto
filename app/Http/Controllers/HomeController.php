@@ -29,11 +29,16 @@ class HomeController extends Controller
      */
     public function welcome()
     {
+        /*
         if(config('restaurant.hasInstall') == 1){
             return view('welcome');
         }else{
             return redirect()->to('/install');
         }
+        */
+
+        return view('auth.login');
+
     }
 
 

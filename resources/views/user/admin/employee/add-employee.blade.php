@@ -9,19 +9,19 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="{{url('/all-employee')}}" class="btn btn-default waves-effect">All Employee <span class="m-l-5"></span></a>
+                <a href="{{url('/all-employee')}}" class="btn btn-default waves-effect">Todos los empleados <span class="m-l-5"></span></a>
             </div>
 
-            <h4 class="page-title">Create New Employee </h4>
+            <h4 class="page-title">Crear Nuevo Empleado </h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li class="active">
-                    Employee
+                    Empleado
                 </li>
                 <li class="active">
-                    Add Employee
+                    Anadir Empleado
                 </li>
             </ol>
         </div>
@@ -36,33 +36,33 @@
                             {{csrf_field()}}
 
                             <div class="form-group">
-                                <label for="" class="col-md-2 control-label">Photo</label>
+                                <label for="" class="col-md-2 control-label">Foto</label>
                                 <div class="col md-10">
                                     <div id="image-preview">
-                                        <label for="image-upload" id="image-label">Choose Photo</label>
+                                        <label for="image-upload" id="image-label">Escoge una Foto</label>
                                         <input type="file" name="thumbnail" id="image-upload"/>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-2 control-label">Full Name :</label>
+                                <label class="col-md-2 control-label">Nombre Completo :</label>
                                 <div class="col-md-8">
                                     <input type="text" name="name" class="form-control" value=""
-                                           placeholder="Employee Name" parsley-trigger="change" maxlength="50" required>
+                                           placeholder="Nombre del empleado" parsley-trigger="change" maxlength="50" required>
 
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-2 control-label" for="example-email">Email</label>
+                                <label class="col-md-2 control-label" for="example-email">Correo</label>
                                 <div class="col-md-8">
-                                    <input type="email" name="email" class="form-control" placeholder="Employee Email"
+                                    <input type="email" name="email" class="form-control" placeholder="Correo del empleado"
                                            parsley-trigger="change" maxlength="50" required>
 
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-2 control-label">Password</label>
+                                <label class="col-md-2 control-label">Contraseña</label>
                                 <div class="col-md-8">
                                     <input type="password" minlength="5" maxlength="20" name="password" placeholder="Password" class="form-control"
                                            value="" id="pass1" required>
@@ -70,27 +70,27 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-2 control-label">Retype Password</label>
+                                <label class="col-md-2 control-label">Vuelva a escribir la contraseña</label>
                                 <div class="col-md-8">
-                                    <input type="password" placeholder="Retype Password" class="form-control" value=""
+                                    <input type="password" placeholder="Vuela a escribir la contraseña" class="form-control" value=""
                                            data-parsley-equalto="#pass1" required>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-2 control-label">Employee Type :</label>
+                                <label class="col-md-2 control-label">Tipo de empleado:</label>
                                 <div class="col-md-6">
                                     <select name="role" id="" class="form-control" required>
-                                        <option value="">Select One</option>
-                                        <option value="2">Shop Manager</option>
-                                        <option value="3">Kitchen</option>
-                                        <option value="4">Waiter</option>
+                                        <option value="">Seleccione Uno</option>
+                                        <option value="2">Gerente de Tienda</option>
+                                        <option value="3">Cocinero</option>
+                                        <option value="4">Camarero</option>
                                     </select>
 
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-2 control-label">Phone </label>
+                                <label class="col-md-2 control-label">Telefono</label>
                                 <div class="col-md-8">
                                     <input type="text" maxlength="20" name="phone" placeholder="Phone number" class="form-control"
                                            value="" data-parsley-type="digits" required>
@@ -98,7 +98,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-2 control-label">Address :</label>
+                                <label class="col-md-2 control-label">Direccion :</label>
                                 <div class="col-md-8">
                                     <textarea minlength="10" class="form-control" required name="address"
                                               rows="5"></textarea>

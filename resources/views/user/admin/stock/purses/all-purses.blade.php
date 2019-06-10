@@ -9,19 +9,19 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="{{url('/new-purses')}}" class="btn btn-default waves-effect">Purses Now <span class="m-l-5"></span></a>
+                <a href="{{url('/new-purses')}}" class="btn btn-default waves-effect">Nuevo Producto <span class="m-l-5"></span></a>
             </div>
 
-            <h4 class="page-title">All Purses </h4>
+            <h4 class="page-title">Todos los Productos </h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li class="active">
-                    Stock Management
+                    Control Stock 
                 </li>
                 <li class="active">
-                    All Purses
+                    Productos
                 </li>
             </ol>
         </div>
@@ -34,14 +34,14 @@
             <thead>
             <tr>
 
-                <th>Date</th>
-                <th>Purses Id</th>
-                <th>Purses Value</th>
-                <th>Purses By</th>
-                <th>Supplied By</th>
-                <th>Status</th>
+                <th>Datos</th>
+                <th>Id Producto</th>
+                <th>Valor del Producto</th>
+                <th>Producido Por</th>
+                <th>Suministrado Por</th>
+                <th>Estado</th>
 
-                <th width="120px">Action</th>
+                <th width="120px">Acciones</th>
             </tr>
             </thead>
             <?php $count = 1; ?>
@@ -97,6 +97,9 @@
     <script>
         $(document).ready(function () {
             $("#datatable-responsive").DataTable({
+                 "language": {
+                  "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                },
 //                order: [0, 'desc'],
                 dom: 'Bfrtip',
                 buttons: [

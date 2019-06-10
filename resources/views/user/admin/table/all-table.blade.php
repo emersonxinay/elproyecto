@@ -8,19 +8,19 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="{{url('/add-table')}}" class="btn btn-default waves-effect">Add Table <span class="m-l-5"></span></a>
+                <a href="{{url('/add-table')}}" class="btn btn-default waves-effect">Agregar Mesa <span class="m-l-5"></span></a>
             </div>
 
-            <h4 class="page-title">Tables </h4>
+            <h4 class="page-title">Mesas </h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li class="active">
-                    Table Management
+                    Control de Mesas
                 </li>
                 <li class="active">
-                    All table
+                    Todas las Mesas
                 </li>
             </ol>
         </div>
@@ -32,10 +32,10 @@
             <thead>
             <tr>
                 <th>#</th>
-                <th>Table No</th>
-                <th>Capacity</th>
-                <th>Status</th>
-                <th width="100px">Action</th>
+                <th>No Mesa</th>
+                <th>Capacidad</th>
+                <th>Estado</th>
+                <th width="100px">Actiones</th>
             </tr>
             </thead>
             <?php $count = 1; ?>
@@ -76,7 +76,11 @@
 @section('extra-js')
     <script>
         $(document).ready(function () {
-            $("#datatable-responsive").DataTable();
+            $("#datatable-responsive").DataTable({
+                "language": {
+                  "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                },
+            });
         })
     </script>
 

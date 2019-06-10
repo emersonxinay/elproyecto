@@ -9,19 +9,19 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="{{url('/all-item')}}" class="btn btn-default waves-effect">All Product <span class="m-l-5"></span></a>
+                <a href="{{url('/all-item')}}" class="btn btn-default waves-effect">Agregar  <span class="m-l-5"></span></a>
             </div>
 
-            <h4 class="page-title">Add Product </h4>
+            <h4 class="page-title">Agregar Item </h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li class="active">
-                    Stock Management
+                     Control de Stock 
                 </li>
                 <li class="active">
-                    Add Product
+                     Items
                 </li>
             </ol>
         </div>
@@ -36,29 +36,29 @@
                             {{csrf_field()}}
 
                             <div class="form-group">
-                                <label for="" class="col-md-2 control-label">Thumbnail</label>
+                                <label for="" class="col-md-2 control-label">Miniatura</label>
                                 <div class="col md-10">
                                     <div id="image-preview">
-                                        <label for="image-upload" id="image-label">Choose Photo</label>
+                                        <label for="image-upload" id="image-label">Escoge una Foto</label>
                                         <input type="file" name="thumbnail" id="image-upload"/>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-2 control-label" for="example-email">Product name :</label>
+                                <label class="col-md-2 control-label" for="example-email">Nombre del Producto :</label>
                                 <div class="col-md-8">
-                                    <input type="text" name="product_name" class="form-control" placeholder="Product name"
+                                    <input type="text" name="product_name" class="form-control" placeholder="Nombre del Producto"
                                            parsley-trigger="change" maxlength="50" required>
 
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-2 control-label" for="example-email">Product Category :</label>
+                                <label class="col-md-2 control-label" for="example-email">Categoria del Producto :</label>
                                 <div class="col-md-8">
                                     <select name="product_type_id" id="" class="form-control">
-                                        <option value="">Select One</option>
+                                        <option value="">Seleccione Uno</option>
                                         @foreach($product_type as $type)
                                             <option value="{{$type->id}}">{{$type->product_type}}</option>
                                         @endforeach
@@ -68,10 +68,10 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-2 control-label" for="example-email">Unit :</label>
+                                <label class="col-md-2 control-label" for="example-email">Unidad :</label>
                                 <div class="col-md-8">
                                     <select name="unit_id" id="" class="form-control">
-                                        <option value="">Select One</option>
+                                        <option value="">Seleccione Uno</option>
                                         @foreach($units as $unit)
                                             <option value="{{$unit->id}}">{{$unit->unit}}</option>
                                         @endforeach
@@ -84,7 +84,7 @@
                             <div class="form-group">
                                 <label class="col-md-2 control-label"></label>
                                 <div class="col-md-10">
-                                    <button type="submit" class="ladda-button btn btn-purple" data-style="expand-right">Save Item
+                                    <button type="submit" class="ladda-button btn btn-purple" data-style="expand-right">Guardar
 
                                     </button>
                                 </div>

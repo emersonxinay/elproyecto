@@ -13,19 +13,19 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="{{url('/add-expense')}}" class="btn btn-default waves-effect">New Expense <span class="m-l-5"></span></a>
+                <a href="{{url('/add-expense')}}" class="btn btn-default waves-effect">Nuevo Gasto <span class="m-l-5"></span></a>
             </div>
 
-            <h4 class="page-title">Total Income {{config('restaurant.currency.symbol')}} {{number_format($total_earn->sum('payment'),2)}} {{config('restaurant.currency.currency')}}</h4>
+            <h4 class="page-title">Ingreso Total {{config('restaurant.currency.symbol')}} {{number_format($total_earn->sum('payment'),2)}} {{config('restaurant.currency.currency')}}</h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li>
-                    <a href="#">Accounting</a>
+                    <a href="#">Contabilidad</a>
                 </li>
                 <li class="active">
-                    Income
+                    Ingresos
                 </li>
             </ol>
         </div>

@@ -10,19 +10,19 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="{{url('/new-order')}}" class="btn btn-default waves-effect">New Order <span class="m-l-5"><i class="fa fa-plus"></i></span></a>
+                <a href="{{url('/new-order')}}" class="btn btn-default waves-effect">Nueva Orden <span class="m-l-5"><i class="fa fa-plus"></i></span></a>
             </div>
 
-            <h4 class="page-title">All Order</h4>
+            <h4 class="page-title">Ordenes</h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li class="active">
-                    Order
+                    Orden
                 </li>
                 <li class="active">
-                    All Order
+                    Lista de Ordenes
                 </li>
             </ol>
         </div>

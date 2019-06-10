@@ -16,7 +16,7 @@
 <div class="wrapper-page">
     <div class=" card-box">
         <div class="panel-heading">
-            <h3 class="text-center"> Sign In to <strong class="text-orange my-logo">Restulator</strong> </h3>
+            <h3 class="text-center"> Ingresa a <strong class="text-orange my-logo">Restaurant Pepita</strong> </h3>
             {{--{{request()->getHttpHost()}}--}}
             {{--{{request()->getHost()}}--}}
         </div>
@@ -27,7 +27,7 @@
                 {{csrf_field()}}
                 <div class="form-group ">
                     <div class="col-xs-12">
-                        <input class="form-control" type="email" required placeholder="Email Address" name="email" value="{{ old('email') }}">
+                        <input class="form-control" type="email" required placeholder="Email" name="email" value="{{ old('email') }}">
                         @if ($errors->has('email'))
                         <span class="help-block">
                         <strong class="text-danger">{{ $errors->first('email') }}</strong>
@@ -52,7 +52,7 @@
                         <div class="checkbox checkbox-primary">
                             <input id="checkbox-signup" type="checkbox"  name="remember" {{ old('remember') ? 'checked' : '' }}>
                             <label for="checkbox-signup">
-                                Remember me
+                                Recordar Contraseña
                             </label>
                         </div>
 
@@ -61,13 +61,13 @@
 
                 <div class="form-group text-center m-t-40">
                     <div class="col-xs-12">
-                        <button class="btn btn-pink btn-orange btn-block text-uppercase waves-effect waves-light" type="submit">Log In</button>
+                        <button class="btn btn-pink btn-orange btn-block text-uppercase waves-effect waves-light" type="submit">Ingresar</button>
                     </div>
                 </div>
 
                 <div class="form-group m-t-30 m-b-0">
                     <div class="col-sm-12">
-                        <a href="{{ route('password.request') }}" class="text-dark"><i class="fa fa-lock m-r-5"></i> Forgot your password?</a>
+                        <a href="{{ route('password.request') }}" class="text-dark"><i class="fa fa-lock m-r-5"></i> Perdiste tu Password?</a>
                     </div>
                 </div>
             </form>

@@ -39,20 +39,20 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="{{url('/add-item')}}" class="btn btn-default waves-effect">Add new product <span
+                <a href="{{url('/add-item')}}" class="btn btn-default waves-effect">Añadir Nuevo Producto <span
                             class="m-l-5"></span></a>
             </div>
 
-            <h4 class="page-title">Current Stock</h4>
+            <h4 class="page-title">Stock Actual</h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li class="active">
-                    Stock Management
+                    Control de Stock
                 </li>
                 <li class="active">
-                    Current Stock
+                    Stock
                 </li>
             </ol>
         </div>
@@ -75,7 +75,7 @@
                     @endforeach
                     <li>
                         <a href="#out_of_stock" data-toggle="tab"
-                           aria-expanded="false">Product out of stock &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge" id="showOutOfStock"></span></a>
+                           aria-expanded="false">Producto Agotado &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge" id="showOutOfStock"></span></a>
 
                     </li>
                 </ul>

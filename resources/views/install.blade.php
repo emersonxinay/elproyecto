@@ -33,7 +33,7 @@
 
                     <div class="form-group">
                         <div class="col-xs-12">
-                            <label for="" class="form-control-label">Port :</label>
+                            <label for="" class="form-control-label">Puerto :</label>
                             <input class="form-control" type="text" data-parsley-type="number" data-parsley-pattern="/^\S*$/" required name="port" placeholder="i.e : 3306" value="3306">
                             @if ($errors->has('port'))
                                 <span class="help-block">
@@ -80,7 +80,7 @@
 
                     <div class="form-group text-center m-t-40">
                         <div class="col-xs-12">
-                            <button class="btn btn-pink btn-block text-uppercase waves-effect waves-light" type="submit">Submit</button>
+                            <button class="btn btn-pink btn-block text-uppercase waves-effect waves-light" type="submit">Enviar</button>
                         </div>
                     </div>
 

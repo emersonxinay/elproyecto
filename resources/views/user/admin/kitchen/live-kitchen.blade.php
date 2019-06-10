@@ -8,17 +8,17 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="#" onclick="$(this).refreshList()" class="btn btn-default waves-effect">Refresh <span
+                <a href="#" onclick="$(this).refreshList()" class="btn btn-default waves-effect">Actualizar <span
                             class="m-l-5"></span></a>
             </div>
 
-            <h4 class="page-title">Live Kitchen</h4>
+            <h4 class="page-title">Cocinando en vivo</h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li class="active">
-                    <a href="#">Live Kitchen</a>
+                    <a href="#">Cocinando en vivo</a>
                 </li>
             </ol>
         </div>
