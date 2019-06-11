@@ -9,19 +9,19 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="{{url('/all-unit')}}" class="btn btn-default waves-effect">All Unit <span class="m-l-5"></span></a>
+                <a href="{{url('/all-unit')}}" class="btn btn-default waves-effect">Unidades <span class="m-l-5"></span></a>
             </div>
 
-            <h4 class="page-title">Unite ({{$unit->unit}})</h4>
+            <h4 class="page-title">Unidad ({{$unit->unit}})</h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li class="active">
-                    Settings
+                    Ajustes
                 </li>
                 <li class="active">
-                    Edit unit
+                    Editar Unidad
                 </li>
             </ol>
         </div>
@@ -32,20 +32,20 @@
             {{csrf_field()}}
             <input type="hidden" id="unitId" value="{{$unit->id}}">
             <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Unit*</label>
+                <label for="inputEmail3" class="col-sm-2 control-label">Unidad*</label>
                 <div class="col-sm-7">
                     <input type="text" required  class="form-control" name="unit" value="{{$unit->unit}}" placeholder="Unit Name">
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Child Unit <span class="text-danger">*</span></label>
+                <label for="inputEmail3" class="col-sm-2 control-label">Unidad Pequeña <span class="text-danger">*</span></label>
                 <div class="col-sm-7">
                     <input type="text" required id="child_unit" class="form-control" value="{{$unit->child_unit}}" name="child_unit" placeholder="Unit Name">
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="" class="col-sm-2 control-label">Unit Convert <span class="text-danger">*</span> </label>
+                <label for="" class="col-sm-2 control-label">Unidad de Conversion <span class="text-danger">*</span> </label>
                 <label for="" class="col-sm-1 control-label">1 <span id="print_unit">{{$unit->unit}}</span> = </label>
                 <div class="col-sm-4">
                     <input type="text" class="form-control" name="convert_rate" value="{{$unit->convert_rate}}" required data-parsley-type="number">
@@ -58,7 +58,7 @@
                     <div class="checkbox checkbox-custom">
                         <input id="checkbox11" name="status" type="checkbox" {{$unit->status ==1 ? 'checked' : ''}}>
                         <label for="checkbox11">
-                            Active
+                            Activo
                         </label>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-8">
                     <button type="submit" class="btn btn-primary waves-effect waves-light">
-                        Update Unit
+                        Actualizar Unidad
                     </button>
 
                 </div>

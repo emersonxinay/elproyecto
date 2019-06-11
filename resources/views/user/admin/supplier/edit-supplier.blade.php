@@ -9,8 +9,8 @@
         <div class="col-sm-12">
             <div class="card-box">
                 <center>
-                    <h4 class="m-t-0 header-title">Edit Supplier</h4>
-                    <p>Edit Supplier</p>
+                    <h4 class="m-t-0 header-title">Editar Proveedor</h4>
+                    <p>Editar Proveedor</p>
                 </center>
                 <hr>
 
@@ -24,7 +24,7 @@
                             <input type="hidden" value="{{$supplier->id}}" id="supplierId">
 
                             <div class="form-group">
-                                <label class="col-md-2 control-label">Name </label>
+                                <label class="col-md-2 control-label">Nombre </label>
                                 <div class="col-md-8">
                                     <input type="text" name="name" class="form-control" value="{{$supplier->name}}"
                                            placeholder="Supplier Name" parsley-trigger="change" maxlength="50" required>
@@ -32,7 +32,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-2 control-label" for="example-email">Email </label>
+                                <label class="col-md-2 control-label" for="example-email">Correo </label>
                                 <div class="col-md-8">
                                     <input type="email" name="email" class="form-control" placeholder="Supplier Email Address"
                                            parsley-trigger="change" maxlength="50" value="{{$supplier->email}}">
@@ -41,7 +41,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-2 control-label" for="example-email">Phone </label>
+                                <label class="col-md-2 control-label" for="example-email">Telefono </label>
                                 <div class="col-md-8">
                                     <input type="text" name="phone" class="form-control" placeholder="Supplier Phone"
                                            parsley-trigger="change" maxlength="50" required value="{{$supplier->phone}}">
@@ -50,7 +50,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-2 control-label" for="example-email">Address </label>
+                                <label class="col-md-2 control-label" for="example-email">Direccion </label>
                                 <div class="col-md-8">
                                     <textarea name="address" minlength="10" cols="20" rows="5" class="form-control" placeholder="Supplier Address" required>{{$supplier->address}}</textarea>
 
@@ -63,7 +63,7 @@
                                     <div class="checkbox checkbox-primary">
                                         <input id="checkbox0" name="status" type="checkbox" {{$supplier->status == 1 ? 'checked' : ''}}>
                                         <label for="checkbox0">
-                                            Active
+                                            Activo
                                         </label>
                                     </div>
                                 </div>
@@ -73,7 +73,7 @@
                             <div class="form-group">
                                 <label class="col-md-2 control-label"></label>
                                 <div class="col-md-10">
-                                    <button type="submit" class="ladda-button btn btn-purple" data-style="expand-right">Update Supplier
+                                    <button type="submit" class="ladda-button btn btn-purple" data-style="expand-right">Actualizar Proveedor
 
                                     </button>
                                 </div>
