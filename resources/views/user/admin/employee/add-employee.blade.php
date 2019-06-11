@@ -92,7 +92,7 @@
                             <div class="form-group">
                                 <label class="col-md-2 control-label">Telefono</label>
                                 <div class="col-md-8">
-                                    <input type="text" maxlength="20" name="phone" placeholder="Phone number" class="form-control"
+                                    <input type="text" maxlength="20" name="phone" placeholder="Numero Telefonico" class="form-control"
                                            value="" data-parsley-type="digits" required>
 
                                 </div>
@@ -109,7 +109,7 @@
                             <div class="form-group">
                                 <label class="col-md-2 control-label"></label>
                                 <div class="col-md-10">
-                                    <button type="submit" class="ladda-button btn btn-purple" data-style="expand-right">Save Employee
+                                    <button type="submit" class="ladda-button btn btn-purple" data-style="expand-right">Guardar Empleado
 
                                     </button>
                                 </div>

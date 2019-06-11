@@ -54,7 +54,7 @@
                     {{csrf_field()}}
 
                     <div class="form-group">
-                        <label for="" class="col-md-2 control-label">Miniatura <span class="text-danger">*</span> </label>
+                        <label for="" class="col-md-2 control-label">Foto <span class="text-danger">*</span> </label>
                         <div class="col md-10">
                             <div id="image-preview">
                                 <label for="image-upload" id="image-label">Escoge una Foto</label>

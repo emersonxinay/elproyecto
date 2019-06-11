@@ -55,19 +55,19 @@
                                 {{$employee->email}}
                             </dd>
                             <dt>
-                                Phone :
+                                Telefono :
                             </dt>
                             <dd>
                                 {{$employee->phone}}
                             </dd>
                             <dt>
-                                Address :
+                                Direccion :
                             </dt>
                             <dd>
                                 {{$employee->address}}
                             </dd>
                             <dt>
-                                Created at :
+                                Creado en :
                             </dt>
                             <dd>
                                 {{$employee->created_at->diffForHumans()}}
@@ -85,21 +85,21 @@
                             </dt>
                             <dd>
                                 @if($employee->user->role == 2)
-                                    <span class="label label-primary">Manager</span>
+                                    <span class="label label-primary">Gerente</span>
                                 @elseif($employee->user->role == 3)
-                                    <span class="label label-purple">Kitchen</span>
+                                    <span class="label label-purple">Cocinero</span>
                                 @elseif($employee->user->role == 4)
-                                    <span class="label label-pink">Waiter</span>
+                                    <span class="label label-pink">Camarero</span>
                                 @endif
                             </dd>
                             <dt>
-                                Status
+                                Estado
                             </dt>
                             <dd>
                                 @if($employee->user->active == 1)
-                                    <span class="label label-primary">Active</span>
+                                    <span class="label label-primary">Activo</span>
                                 @else
-                                    <span class="label label-danger">InActive</span>
+                                    <span class="label label-danger">Inactivo</span>
                                 @endif
                             </dd>
 

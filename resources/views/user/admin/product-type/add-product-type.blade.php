@@ -9,19 +9,19 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="{{url('/all-product-type')}}" class="btn btn-default waves-effect">All Product Types <span class="m-l-5"></span></a>
+                <a href="{{url('/all-product-type')}}" class="btn btn-default waves-effect">Todos los tipos de productos <span class="m-l-5"></span></a>
             </div>
 
-            <h4 class="page-title">Create Product Type</h4>
+            <h4 class="page-title">Crear tipo de Producto</h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li class="active">
-                    Settings
+                    Ajustes
                 </li>
                 <li class="active">
-                    Add Product Type
+                    Añadir tipo de Producto
                 </li>
             </ol>
         </div>
@@ -31,7 +31,7 @@
         <form class="form-horizontal" role="form" id="unitForm" method="POST" data-parsley-validate novalidate>
             {{csrf_field()}}
             <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Product Type <span class="text-danger">*</span> </label>
+                <label for="inputEmail3" class="col-sm-2 control-label">Tipo de Producto <span class="text-danger">*</span> </label>
                 <div class="col-sm-7">
                     <input type="text" required id="unit" class="form-control" name="product_type" placeholder="I.e : Spices, Meet">
 
@@ -42,7 +42,7 @@
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-8">
                     <button type="submit" class="btn btn-primary waves-effect waves-light">
-                        Save Product Type
+                        Guardar tipo de Producto
                     </button>
 
                 </div>

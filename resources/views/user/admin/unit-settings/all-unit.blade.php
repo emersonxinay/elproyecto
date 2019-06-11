@@ -49,9 +49,9 @@
                     </td>
                     <td>
                         @if($unit->status == 1)
-                            Active
+                            Activo
                             @else
-                            InActive
+                            Inactivo
                         @endif
                     </td>
 

@@ -46,12 +46,12 @@
                 <label for="webSite" class="col-sm-1 control-label">Cantidad</label>
                 <div class="col-sm-1">
                     <input type="number" min="1" value="1" required class="form-control" id="quantity"
-                           placeholder="Quantity">
+                           placeholder="Cantidad">
                 </div>
                 <label for="webSite" class="col-sm-1 control-label">Precio</label>
                 <div class="col-sm-3">
                     <input type="number" min="1" disabled required class="form-control" id="price"
-                           placeholder="Quantity">
+                           placeholder="Cantidad">
                 </div>
             </div>
 

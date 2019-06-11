@@ -47,9 +47,9 @@
                     <td>{{$table->table_capacity}}</td>
                     <td>
                         @if($table->status == 1)
-                            Active
+                            Activo
                             @else
-                        In-Active
+                        In-Activo
                             @endif
                     </td>
 
