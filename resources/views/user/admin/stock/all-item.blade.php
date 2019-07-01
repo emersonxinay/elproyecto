@@ -116,16 +116,16 @@
                                             </h4>
 
                                             <p>
-                                                Use in recipe : <b>{{count($product->recipes)}}</b> <br>
-                                                Total Purse &nbsp;&nbsp;&nbsp;: <b>{{$total_purses}}
+                                                Uso en Receta : <b>{{count($product->recipes)}}</b> <br>
+                                                Bolso Total &nbsp;&nbsp;&nbsp;: <b>{{$total_purses}}
                                                     | {{$product_unit}}</b> <br>
-                                                Total Cooked : <b> {{$total_cooked}} | {{$product_unit}}</b> <br>
-                                                Available &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+                                                Cocido Total: <b> {{$total_cooked}} | {{$product_unit}}</b> <br>
+                                                Disponible &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
                                                 <b>{{$available_product}} | {{$product_unit}}</b> <br>
-                                                Last Purses
-                                                &nbsp;&nbsp;&nbsp;: {{$product->purses->last() ? $product->purses->last()->created_at->format('d-M-Y') : "Not Purses Yet"}}
+                                                Ultimas Bolsas
+                                                &nbsp;&nbsp;&nbsp;: {{$product->purses->last() ? $product->purses->last()->created_at->format('d-M-Y') : "Aun no hay bolsas"}}
                                                 <br>
-                                                Added By &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{$product->user->name}}
+                                                Añadido por: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{$product->user->name}}
                                             </p>
 
                                         </div>
@@ -134,7 +134,7 @@
                                 @empty
                                     <div class="col-md-12">
                                         <center>
-                                            <h1>Nothing Found is this product category</h1>
+                                            <h1>Nada encontrado en esta categoria de Producto</h1>
                                         </center>
                                     </div>
 

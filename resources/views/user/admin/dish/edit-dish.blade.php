@@ -9,19 +9,19 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="{{url('/all-dish')}}" class="btn btn-default waves-effect">All Dish <span class="m-l-5"></span></a>
+                <a href="{{url('/all-dish')}}" class="btn btn-default waves-effect">Todos los Platos<span class="m-l-5"></span></a>
             </div>
 
-            <h4 class="page-title">Edit Dish </h4>
+            <h4 class="page-title">Editar Platos </h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li class="active">
-                    Dish
+                    Plato
                 </li>
                 <li class="active">
-                    Edit Dish
+                    Editar Plato
                 </li>
             </ol>
         </div>
@@ -36,19 +36,19 @@
         <li class="">
             <a href="{{url('/dish-price/'.$dish->id)}}"  aria-expanded="false">
                 <span class="visible-xs"><i class="fa fa-usd"></i></span>
-                <span class="hidden-xs">Dish Price</span>
+                <span class="hidden-xs">Precio del Plato</span>
             </a>
         </li>
         <li class="">
             <a href="{{url('/dish-image/'.$dish->id)}}"  aria-expanded="false">
                 <span class="visible-xs"><i class="fa fa-photo"></i></span>
-                <span class="hidden-xs">Dish Images</span>
+                <span class="hidden-xs">Imagenes del Plato</span>
             </a>
         </li>
         <li class="">
             <a href="{{url('/dish-recipe/'.$dish->id)}}"  aria-expanded="false">
                 <span class="visible-xs"><i class="fa fa-photo"></i></span>
-                <span class="hidden-xs">Recipe</span>
+                <span class="hidden-xs">Receta</span>
             </a>
         </li>
     </ul>
@@ -60,20 +60,20 @@
                 {{csrf_field()}}
                 <input type="hidden" value="{{$dish->id}}" id="dishId">
                 <div class="form-group">
-                    <label for="" class="col-md-2 control-label">Thumbnail <span class="text-danger">*</span> </label>
+                    <label for="" class="col-md-2 control-label">Fotografia<span class="text-danger">*</span> </label>
                     <div class="col md-10">
                         <div id="image-preview" style="background-image: url({{url($dish->thumbnail != "" | null ? $dish->thumbnail : '/img_assets/avater.png')}})">
-                            <label for="image-upload" id="image-label">Choose Photo</label>
+                            <label for="image-upload" id="image-label">Suba una Foto</label>
                             <input type="file" name="thumbnail" id="image-upload"/>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="col-md-2 control-label">Dish Name <span class="text-danger">*</span></label>
+                    <label class="col-md-2 control-label">Nombre del Plato <span class="text-danger">*</span></label>
                     <div class="col-md-8">
                         <input type="text" name="dish" class="form-control" value="{{$dish->dish}}"
-                               placeholder="Dish Name" parsley-trigger="change" maxlength="50" required>
+                               placeholder="Nombre del Plato" parsley-trigger="change" maxlength="50" required>
                     </div>
                 </div>
 
@@ -82,7 +82,7 @@
                     <div class="checkbox checkbox-custom checkbox-circle col-md-offset-2">
                         <input id="checkbox71" name="available" type="checkbox" {{$dish->available == 1 ? 'checked' : ''}}>
                         <label for="checkbox71">
-                            Available
+                            Disponible
                         </label>
                     </div>
 
@@ -90,7 +90,7 @@
                 <div class="form-group">
                     <label class="col-md-2 control-label"></label>
                     <div class="col-md-10">
-                        <button type="submit" class="btn btn-purple">Update Dish</button>
+                        <button type="submit" class="btn btn-purple">Actualizar Plato</button>
                     </div>
                 </div>
 

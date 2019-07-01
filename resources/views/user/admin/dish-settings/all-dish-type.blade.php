@@ -6,8 +6,8 @@
 
 @section('content')
     <div class="card-box">
-        <div class="pull-right"><a href="{{url('/add-dish-type')}}" class="btn btn-success">Add Dish Type</a></div>
-        <h3 class="m-t-0 "><b>Dish Types</b></h3>
+        <div class="pull-right"><a href="{{url('/add-dish-type')}}" class="btn btn-success">Añadir Tipo de Plato</a></div>
+        <h3 class="m-t-0 "><b>Tipos de Plato</b></h3>
         <p>sdjlk adfasdf</p>
         <table id="datatable-responsive"
                class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0"
@@ -15,9 +15,9 @@
             <thead>
             <tr>
                 <th>#</th>
-                <th>Unit</th>
+                <th>Unidad</th>
                 <th>Info</th>
-                <th width="80px">Action</th>
+                <th width="80px">Actiones</th>
             </tr>
             </thead>
             <?php $count = 1; ?>
@@ -30,9 +30,9 @@
                     </td>
                     <td>
                         @if($dish->status == 1)
-                            Active
+                            Activo
                         @else
-                            InActive
+                            InActivo
                         @endif
                     </td>
 
@@ -57,7 +57,11 @@
 @section('extra-js')
     <script>
         $(document).ready(function () {
-            $("#datatable-responsive").DataTable();
+            $("#datatable-responsive").DataTable({
+                "language": {
+                  "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                },
+            });
         })
     </script>
 

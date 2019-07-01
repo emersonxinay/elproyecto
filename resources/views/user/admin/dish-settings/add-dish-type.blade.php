@@ -6,14 +6,14 @@
 
 @section('content')
     <div class="card-box">
-        <h4 class="m-t-0 header-title"><b>New Dish Type</b></h4>
+        <h4 class="m-t-0 header-title"><b>Nuevo tipo de Plato</b></h4>
         <p class="text-muted font-13 m-b-30">
-            Responsive is an extension for DataTables that resolves that problem by optimising the
+            <!--Responsive is an extension for DataTables that resolves that problem by optimising the-->
         </p>
         <form class="form-horizontal" role="form" id="unitForm" method="POST" data-parsley-validate novalidate>
             {{csrf_field()}}
             <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Dish*</label>
+                <label for="inputEmail3" class="col-sm-2 control-label">Plato*</label>
                 <div class="col-sm-7">
                     <input type="text" required  class="form-control" name="dish" placeholder="1/2, 3/4">
                 </div>
@@ -23,7 +23,7 @@
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-8">
                     <button type="submit" class="btn btn-primary waves-effect waves-light">
-                        Save Unit
+                        Guardad
                     </button>
 
                 </div>

@@ -25,10 +25,10 @@
                             <div class="form-group">
                                 <input type="hidden" value="{{$purses->id}}" id="purses_id">
 
-                                <label for="" class="col-md-2 control-label">Select Product</label>
+                                <label for="" class="col-md-2 control-label">Seleciona Producto</label>
                                 <div class="col-md-3">
                                     <select name="product_id" id="product" class="form-control" required>
-                                        <option value="">Select One</option>
+                                        <option value="">Selecciona Uno</option>
                                         @foreach($products as $product)
                                             <option value="{{$product->id}}">{{$product->product_name}}
                                                 | {{$product->product_code}}</option>
@@ -36,18 +36,18 @@
                                     </select>
                                 </div>
 
-                                <label class="col-md-1 control-label" for="example-email">Quantity :</label>
+                                <label class="col-md-1 control-label" for="example-email">Cantidad :</label>
                                 <div class="col-md-2">
                                     <div class="input-group ">
                                         <input type="text" id="quantity" name="quantity" class="form-control"
-                                               placeholder="Quantity">
-                                        <span class="input-group-addon" id="unit">Unit</span>
+                                               placeholder="Cantidad">
+                                        <span class="input-group-addon" id="unit">Unidad</span>
                                     </div>
                                 </div>
-                                <label class="col-md-1 control-label" for="example-email">Unit Price :</label>
+                                <label class="col-md-1 control-label" for="example-email">Precio Unidad :</label>
                                 <div class="col-md-2">
                                     <input type="number" min="1" name="unit_price" class="form-control"
-                                           placeholder="Unit Price"
+                                           placeholder="Precio Unitrio"
                                            parsley-trigger="change" maxlength="50" required id="unitPrice">
                                 </div>
                             </div>
@@ -56,23 +56,23 @@
 
                             <div class="form-group">
 
-                                <label for="" class="col-md-2 control-label">Child unit price</label>
+                                <label for="" class="col-md-2 control-label">Precio Unidad Pequeño</label>
                                 <div class="col-md-2">
                                     <div class="input-group">
                                         <input readonly  type="text" id="child_unit_price" name="child_unit_price"
                                                class="form-control"
-                                               placeholder="Child Unit Price">
-                                        <span class="input-group-addon" id="child_unit">Unit</span>
+                                               placeholder="Precio Unidad Pequeño">
+                                        <span class="input-group-addon" id="child_unit">Unidad</span>
                                     </div>
                                 </div>
 
-                                <label class="col-md-1 control-label" for="example-email">Gross Price</label>
+                                <label class="col-md-1 control-label" for="example-email">Precio Bruto</label>
                                 <div class="col-md-3">
                                     <div class="input-group">
                                         <span class="input-group-addon"
                                               id="">{{config('restaurant.currency.symbol')}}</span>
                                         <input disabled type="number" min="1" name="product_name" class="form-control"
-                                               placeholder="Gross Price"
+                                               placeholder="Precio Bruto"
                                                parsley-trigger="change" maxlength="50" required id="grossPrice">
                                         <span class="input-group-addon"
                                               id="">{{config('restaurant.currency.currency')}}</span>
@@ -86,7 +86,7 @@
                                 <label class="col-md-2 control-label"></label>
                                 <div class="col-md-10">
                                     <button type="submit" class="btn btn-purple">
-                                        Purses Now
+                                        Bolso ahora
 
                                     </button>
                                 </div>
@@ -101,13 +101,13 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Supplier</th>
-                                <th>Product</th>
-                                <th width="100px">Quantity</th>
-                                <th width="150px">Unit Price</th>
-                                <th>Child Unit Price</th>
-                                <th>Gross Price</th>
-                                <th width="95px">Action</th>
+                                <th>Proveedor</th>
+                                <th>Producto</th>
+                                <th width="100px">Cantidad</th>
+                                <th width="150px">Precio Unitario</th>
+                                <th>Precio Unitario Pequeño</th>
+                                <th>Precio Bruto</th>
+                                <th width="95px">Acciones</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -146,7 +146,7 @@
                             </tr>
                             <tr>
                                 <th colspan="5"></th>
-                                <th class="text-right">Total Payment :</th>
+                                <th class="text-right">Pago Total :</th>
                                 <th>{{config('restaurant.currency.symbol') }} {{number_format($pursesPaymentPrice,2,'.',',') }} {{config('restaurant.currency.currency')}}</th>
                                 <th>{{count($purses->pursesPayments)}} Payment</th>
                             </tr>
@@ -154,20 +154,20 @@
                                 <tr>
                                     <th colspan="6"></th>
                                     <th>
-                                        <h4 class="text-success"><label for="">Paid</label></h4>
+                                        <h4 class="text-success"><label for="">Pagado</label></h4>
                                     </th>
                                 </tr>
                             @else
                                 <tr>
                                     <th colspan="5"></th>
-                                    <th class="text-right">Total Due :</th>
+                                    <th class="text-right">Total a Pagar :</th>
                                     <th>{{config('restaurant.currency.symbol') }} {{ number_format($pursesPrice - $pursesPaymentPrice,2,'.',',')  }} {{config('restaurant.currency.currency')}}</th>
                                     <th></th>
                                 </tr>
                                 <tr>
                                     <th colspan="5"></th>
                                     <th></th>
-                                    <th><a href="#" class="btn btn-success">Make a payment</a> </th>
+                                    <th><a href="#" class="btn btn-success">Realizar Un Pago</a> </th>
                                 </tr>
 
                             @endif

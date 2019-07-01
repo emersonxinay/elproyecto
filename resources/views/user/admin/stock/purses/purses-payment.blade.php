@@ -8,13 +8,13 @@
 
     <ol class="breadcrumb">
         <li>
-            <a href="{{url('/')}}">Home</a>
+            <a href="{{url('/')}}">Inicio</a>
         </li>
         <li>
-            <a href="{{url('/all-purses')}}">All Purses</a>
+            <a href="{{url('/all-purses')}}">Bolsos</a>
         </li>
         <li>
-            <a href="{{url('/purses-payment/'.$purses->id)}}">Purses-{{$purses->purses_id}}</a>
+            <a href="{{url('/purses-payment/'.$purses->id)}}">Bolsos-{{$purses->purses_id}}</a>
         </li>
     </ol>
 
@@ -27,45 +27,45 @@
     <div class="row">
         <div class="card-box">
             <center>
-                <h4 class="header-title">Payment on Purses-{{$purses->purses_id}}</h4>
+                <h4 class="header-title">Pago de Bolsos-{{$purses->purses_id}}</h4>
             </center>
             <dl class="dl-horizontal m-b-0">
                 <dt>
-                    Purses Id :
+                    Bolsos Id :
                 </dt>
                 <dd>
                     {{$purses->purses_id}}
                 </dd>
                 <dt>
-                    Purses By :
+                    Bolsos de :
                 </dt>
                 <dd>
                     {{$purses->user->name}}
                 </dd>
-                <dt>Supplier :</dt>
+                <dt>Proveedor :</dt>
                 <dd>
                     <a href="{{url('/view-supplier/'.$purses->supplier->id)}}" class="btn btn-link">{{$purses->supplier->name}}</a>
                 </dd>
                 <dt>
-                    Purses At :
+                    Bolsos en :
                 </dt>
                 <dd>
                     {{$purses->created_at}}
                 </dd>
                 <dt>
-                    Purses Value :
+                    Valor del Bolso :
                 </dt>
                 <dd>
                     <b>{{config('restaurant.currency.symbol')}} {{ number_format($purseValue,2,'.',',') }} {{config('restaurant.currency.currency')}}</b>
                 </dd>
                 <dt>
-                    Purses Payment :
+                    Pago de Bolso :
                 </dt>
                 <dd>
                     <b>{{config('restaurant.currency.symbol')}} {{number_format($pursePayment,2,'.',',')}} {{config('restaurant.currency.currency')}}</b>
                 </dd>
                 <dt>
-                    Purses Due :
+                    Bolsos Vencidos :
                 </dt>
                 <dd>
                     <b>
@@ -73,12 +73,10 @@
                     </b>
                 </dd>
                 <dt>
-                    Purses Details :
+                    Detalle de los Bolsos :
                 </dt>
                 <dd>
-                    <button class="btn btn-link btn-xs" data-toggle="collapse" data-target="#pursesHistoty">Click To
-                        view
-                        details
+                    <button class="btn btn-link btn-xs" data-toggle="collapse" data-target="#pursesHistoty">Clic para ver los detalles
                     </button>
                     <div id="pursesHistoty" class="collapse">
                         <div class="table-responsive">
@@ -86,12 +84,12 @@
                                 <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Product</th>
-                                    <th>Product Code</th>
-                                    <th>Quantity</th>
-                                    <th>Unit Price</th>
-                                    <th>Child unit price</th>
-                                    <th class="text-right">Gross price</th>
+                                    <th>Producto</th>
+                                    <th>Codigo del producto</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio Unitario</th>
+                                    <th>Precio Unitario Pequeño</th>
+                                    <th class="text-right">Precio Bruto</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -118,12 +116,9 @@
                         </div>
                     </div>
                 </dd>
-                <dt>Payment Details :</dt>
+                <dt>Detalles del Pago:</dt>
                 <dd>
-                    <button class="btn btn-link btn-xs" data-toggle="collapse" data-target="#paymentHistory">Click To
-                        view
-                        details
-                    </button>
+                    <button class="btn btn-link btn-xs" data-toggle="collapse" data-target="#paymentHistory">Clic para ver los detalles
 
                     <div class="collapse" id="paymentHistory">
                         <div class="table-responsive">
@@ -131,9 +126,9 @@
                                 <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Date</th>
-                                    <th class="text-right">Amount</th>
-                                    <th>Payied By</th>
+                                    <th>Fecha</th>
+                                    <th class="text-right">Cantidad</th>
+                                    <th>Pagado por</th>
                                 </tr>
                                 </thead>
                                 <tboody>
@@ -160,7 +155,7 @@
             </dl>
             <hr>
             <center>
-                <h4 class="header-title">Make a new payment</h4>
+                <h4 class="header-title">Hacer un nuevo Pago</h4>
                 @if($purseDue != 0)
                     <div class="row">
                         <div class="col-md-offset-3 col-md-6">
@@ -168,14 +163,14 @@
                                   class="form-horizontal">
                                 {{csrf_field()}}
                                 <div class="form-group">
-                                    <label for="" class="col-md-3 control-label">Current Due</label>
+                                    <label for="" class="col-md-3 control-label">Actual Debido</label>
                                     <div class="col-md-9">
                                         <input type="text" readonly class="form-control" id="currentDue"
                                                value="{{$purseDue}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-3 control-label">Todays Payment :</label>
+                                    <label class="col-md-3 control-label">Pago de Hoy :</label>
                                     <div class="col-md-9">
                                         <input type="number" min="1" required name="payment" class="form-control"
                                                id="payment" value="">
@@ -188,8 +183,7 @@
                                 </div>
                                 <div class="form-group m-b-0">
                                     <div class="col-sm-9">
-                                        <button type="submit" class="btn btn-success waves-effect waves-light">Make
-                                            Payment
+                                        <button type="submit" class="btn btn-success waves-effect waves-light"> Realizar Pago
                                         </button>
                                     </div>
                                 </div>
@@ -197,7 +191,7 @@
                         </div>
                     </div>
                 @else
-                    <p>There is no due to pay</p>
+                    <p>No hay que Pagar</p>
                 @endif
             </center>
         </div>

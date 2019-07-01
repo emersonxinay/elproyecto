@@ -9,19 +9,19 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="{{url('/all-dish')}}" class="btn btn-default waves-effect">All Dish <span class="m-l-5"></span></a>
+                <a href="{{url('/all-dish')}}" class="btn btn-default waves-effect">Todos los Platos <span class="m-l-5"></span></a>
             </div>
 
-            <h4 class="page-title">Edit Dish </h4>
+            <h4 class="page-title">Editar Platos </h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li class="active">
-                    Dish
+                    Plato
                 </li>
                 <li class="active">
-                    Edit Dish
+                    Editar Platos
                 </li>
             </ol>
         </div>
@@ -36,19 +36,19 @@
         <li class="active">
             <a href="{{url('/dish-price/'.$dish->id)}}" data-toggle="tab" aria-expanded="false">
                 <span class="visible-xs"><i class="fa fa-usd"></i></span>
-                <span class="hidden-xs">Dish Price</span>
+                <span class="hidden-xs">Precio del Plato</span>
             </a>
         </li>
         <li class="">
             <a href="{{url('/dish-image/'.$dish->id)}}"  aria-expanded="false">
                 <span class="visible-xs"><i class="fa fa-photo"></i></span>
-                <span class="hidden-xs">Dish Images</span>
+                <span class="hidden-xs">Imagenes del Plato</span>
             </a>
         </li>
         <li class="">
             <a href="{{url('/dish-recipe/'.$dish->id)}}" aria-expanded="false">
                 <span class="visible-xs"><i class="fa fa-photo"></i></span>
-                <span class="hidden-xs">Recipe</span>
+                <span class="hidden-xs">Receta</span>
             </a>
         </li>
     </ul>
@@ -59,11 +59,11 @@
                 {{csrf_field()}}
                 <input type="hidden" value="{{$dish->id}}" id="dishId" name="dish_id">
                 <div class="form-group m-r-10">
-                    <label>Dish Type </label>
-                    <input type="text" name="dish_type" required class="form-control"  placeholder="1/3 , 4/5">
+                    <label>Tipo de Plato </label>
+                    <input type="text" name="dish_type" required class="form-control"  placeholder="...">
                 </div>
                 <div class="form-group m-r-10">
-                    <label>Price </label>
+                    <label>Precio </label>
                     <div class="input-group m-t-8">
                         <span class="input-group-addon">{{config('restaurant.currency.symbol')}}</span>
                         <input type="number" required  name="price" class="form-control" placeholder="..">
@@ -71,7 +71,7 @@
 
                 </div>
                 <button type="submit"  class="btn btn-default waves-effect waves-light btn-md">
-                    Save
+                    Guardar
                 </button>
 
             </form>
@@ -81,7 +81,7 @@
 
                 <li>
                     <i class="ti-download text-success"></i>
-                    <span class="text">Dish One - {{$dish_price->dish_type}}</span>
+                    <span class="text">Un plato - {{$dish_price->dish_type}}</span>
                     <span class="text-success tran-price">{{config('restaurant.currency.symbol')}} {{number_format($dish_price->price,2)}} {{config('restaurant.currency.currency')}}</span>
                     <span class="pull-right">|
                         <a href="{{url('/edit-dish-price/'.$dish_price->id)}}" class="btn btn-link"><i class="fa fa-pencil"></i></a>
@@ -91,7 +91,7 @@
                     <span class="clearfix"></span>
                 </li>
                 @empty
-                   <p>Noting Found</p>
+                   <p>Nada Encontrado.</p>
                 @endforelse
             </ul>
 

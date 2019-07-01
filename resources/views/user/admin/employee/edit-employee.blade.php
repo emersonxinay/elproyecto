@@ -8,19 +8,19 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="{{url('/all-employee')}}" class="btn btn-default waves-effect">All Employee <span class="m-l-5"></span></a>
+                <a href="{{url('/all-employee')}}" class="btn btn-default waves-effect">Todos los Empleados <span class="m-l-5"></span></a>
             </div>
 
-            <h4 class="page-title">All Employee </h4>
+            <h4 class="page-title">Todos los Empleados </h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li class="active">
-                    Employee
+                    Empleado
                 </li>
                 <li class="active">
-                    Edit Employee
+                    Editar Empleado
                 </li>
             </ol>
         </div>
@@ -36,17 +36,17 @@
                             {{csrf_field()}}
                             <input type="hidden" id="id" value="{{$employee->id}}">
                             <div class="form-group">
-                                <label for="" class="col-md-2 control-label">Photo</label>
+                                <label for="" class="col-md-2 control-label">Foto</label>
                                 <div class="col md-10">
                                     <div id="image-preview" style="background-image: url({{url($employee->user->image != "" | null ? $employee->user->image : '/img_assets/avater.png')}})">
-                                        <label for="image-upload" id="image-label">Choose Photo</label>
+                                        <label for="image-upload" id="image-label">Sube una Foto</label>
                                         <input type="file"  name="thumbnail" id="image-upload"/>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-2 control-label">Full Name :</label>
+                                <label class="col-md-2 control-label">Nombre Compelto :</label>
                                 <div class="col-md-8">
                                     <input type="text" name="name" class="form-control" value="{{$employee->name}}"
                                            placeholder="Employee Name" parsley-trigger="change" maxlength="50" required>
@@ -56,7 +56,7 @@
                             <div class="form-group">
                                 <label class="col-md-2 control-label" for="example-email">Email</label>
                                 <div class="col-md-8">
-                                    <input type="email" name="email" class="form-control" placeholder="Employee Email"
+                                    <input type="email" name="email" class="form-control" placeholder="Email"
                                            parsley-trigger="change" maxlength="50" value="{{$employee->email}}" required>
 
                                 </div>
@@ -70,35 +70,35 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-2 control-label">Retype Password</label>
+                                <label class="col-md-2 control-label">Vuelve a escribir el Password</label>
                                 <div class="col-md-8">
-                                    <input type="password" placeholder="Retype Password" class="form-control" value=""
+                                    <input type="password" placeholder="Repite Password" class="form-control" value=""
                                            data-parsley-equalto="#pass1">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-2 control-label">Employee Type :</label>
+                                <label class="col-md-2 control-label">Tipo de Empleado :</label>
                                 <div class="col-md-6">
                                     <select name="role" id="" class="form-control" required>
                                         <option value="" >Select One</option>
-                                        <option value="2" {{$employee->user->role == 2 ? 'selected' :''}}>Shop Manager</option>
-                                        <option value="3" {{$employee->user->role == 3 ? 'selected' :''}}>Kitchen</option>
-                                        <option value="4" {{$employee->user->role == 4 ? 'selected' :''}}>Waiter</option>
+                                        <option value="2" {{$employee->user->role == 2 ? 'selected' :''}}>Gerente de Tienda</option>
+                                        <option value="3" {{$employee->user->role == 3 ? 'selected' :''}}>Cocinero</option>
+                                        <option value="4" {{$employee->user->role == 4 ? 'selected' :''}}>Cmarero</option>
                                     </select>
 
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-2 control-label">Phone </label>
+                                <label class="col-md-2 control-label">Telefono </label>
                                 <div class="col-md-8">
-                                    <input type="text" maxlength="20" name="phone" placeholder="Phone number" class="form-control"
+                                    <input type="text" maxlength="20" name="phone" placeholder="Numero Telefonico" class="form-control"
                                            value="{{$employee->phone}}" data-parsley-type="digits" required>
 
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-2 control-label">Address :</label>
+                                <label class="col-md-2 control-label">Direccion :</label>
                                 <div class="col-md-8">
                                     <textarea minlength="10" class="form-control" required name="address"
                                               rows="5">{{$employee->address}}</textarea>
@@ -121,7 +121,7 @@
                             <div class="form-group">
                                 <label class="col-md-2 control-label"></label>
                                 <div class="col-md-10">
-                                    <button type="submit" class="ladda-button btn btn-purple"  data-style="expand-right">Save Employee
+                                    <button type="submit" class="ladda-button btn btn-purple"  data-style="expand-right">Guardar Empleado
 
                                     </button>
                                 </div>

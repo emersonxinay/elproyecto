@@ -9,19 +9,19 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="{{url('/all-dish')}}" class="btn btn-default waves-effect">All Dish <span class="m-l-5"></span></a>
+                <a href="{{url('/all-dish')}}" class="btn btn-default waves-effect">Todo los Platos <span class="m-l-5"></span></a>
             </div>
 
-            <h4 class="page-title">Edit Dish </h4>
+            <h4 class="page-title">Editar Platos </h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li class="active">
-                    Dish
+                    Plato
                 </li>
                 <li class="active">
-                    Edit Dish
+                    Editar Plato
                 </li>
             </ol>
         </div>
@@ -36,19 +36,19 @@
         <li class="">
             <a href="{{url('/dish-price/'.$dish->id)}}" aria-expanded="false">
                 <span class="visible-xs"><i class="fa fa-usd"></i></span>
-                <span class="hidden-xs">Dish Price</span>
+                <span class="hidden-xs">Precio del Plato</span>
             </a>
         </li>
         <li class="">
             <a href="{{url('/dish-image/'.$dish->id)}}" aria-expanded="false">
                 <span class="visible-xs"><i class="fa fa-photo"></i></span>
-                <span class="hidden-xs">Dish Images</span>
+                <span class="hidden-xs">Imagenen del Plato</span>
             </a>
         </li>
         <li class="active">
             <a href="{{url('/dish-recipe/'.$dish->id)}}" data-toggle="tab" aria-expanded="false">
                 <span class="visible-xs"><i class="fa fa-photo"></i></span>
-                <span class="hidden-xs">Recipe</span>
+                <span class="hidden-xs">Receta</span>
             </a>
         </li>
     </ul>
@@ -60,10 +60,10 @@
                   enctype="multipart/form-data" data-parsley-validate novalidate>
                 {{csrf_field()}}
                 <div class="form-group">
-                    <label for="" class="col-md-2 control-label">Dish Type</label>
+                    <label for="" class="col-md-2 control-label">Tipo de Plato</label>
                     <div class="col-md-8">
                         <select name="dish_type_id" id="" class="form-control" required>
-                            <option value="">Select one</option>
+                            <option value="">Seleccione Uno</option>
                             @foreach($dish->dishPrices as $dishType)
                                 <option value="{{$dishType->id}}">{{$dishType->dish_type}}</option>
                             @endforeach
@@ -71,10 +71,10 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-2 control-label" for="example-email">Product :</label>
+                    <label class="col-md-2 control-label" for="example-email">Producto :</label>
                     <div class="col-md-8">
                         <select name="product_id" id="product" class="form-control" required>
-                            <option value="">Select One</option>
+                            <option value="">Seleccione Uno</option>
                             @foreach($products as $product)
                                 <option value="{{$product->id}}">{{$product->product_name}}
                                     &nbsp;&nbsp;&nbsp; {{$product->product_code}} </option>
@@ -83,14 +83,14 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-2 control-label" for="example-email">Unit need to cook :</label>
+                    <label class="col-md-2 control-label" for="example-email">Unidad Para Cocinar :</label>
                     <div class="col-md-3">
                         <div class="input-group">
                             <input type="number" name="unit" class="form-control" id="unit_input" step="0.01" required>
                             <span class="input-group-addon" id="unit">.00</span>
                         </div>
                     </div>
-                    <label class="col-md-2 control-label" for="example-email">Child Unit need to cook
+                    <label class="col-md-2 control-label" for="example-email">Unidad pequeña para Cocinar
                         :</label>
                     <div class="col-md-3 input-group">
                         <input type="number" name="child_unit" class="form-control" id="child_unit_input" step="0.01"
@@ -102,7 +102,7 @@
                 <div class="form-group">
                     <label class="col-md-2 control-label"></label>
                     <div class="col-md-10">
-                        <button type="submit" class="btn btn-purple">Add Product to recipe
+                        <button type="submit" class="btn btn-purple">Añadir Producto a la Receta
 
                         </button>
                     </div>
@@ -119,11 +119,11 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Product</th>
-                                <th>Unit</th>
-                                <th>Child Unit</th>
-                                <th>Creator</th>
-                                <th>Action</th>
+                                <th>Producto</th>
+                                <th>Unidad</th>
+                                <th>Unidad Hijo</th>
+                                <th>Creador</th>
+                                <th>Acciones</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -137,7 +137,7 @@
                                         <td>{{$recipe->child_unit_needed}} - {{$recipe->product->unit->child_unit}}</td>
                                         <td>{{$recipe->user_id}}</td>
                                         <td>
-                                            <a href="{{url('/delete-recipes/'.$recipe->id)}}" class="btn btn-danger">Delete</a>
+                                            <a href="{{url('/delete-recipes/'.$recipe->id)}}" class="btn btn-danger">Borrar</a>
                                         </td>
                                     </tr>
                                 @endif

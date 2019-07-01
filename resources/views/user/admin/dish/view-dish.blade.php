@@ -12,7 +12,7 @@
                 <img src="{{url($dish->thumbnail)}}" alt="" class="img-responsive">
             </div>
             <div class="col-md-8">
-                <h4 class="header-title">Dish Type(s) with price</h4>
+                <h4 class="header-title">Tipo (s) de plato con precio</h4>
                 <ul class="list-group">
                     @foreach($dish->dishPrices as $dishPrice)
                     <li class="list-group-item">
