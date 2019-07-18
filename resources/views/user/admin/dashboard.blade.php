@@ -121,7 +121,7 @@
                 ykeys: ['value'],
                 // Labels for the ykeys -- will be displayed when you hover over the
                 // chart.
-                labels: ['Total Order'],
+                labels: ['Orden Total'],
                 barColors: ['orangered'],
                 gridTextColor : '#000',
                 gridTextSize: '15px',
@@ -146,7 +146,7 @@
                 ykeys: ['value'],
                 // Labels for the ykeys -- will be displayed when you hover over the
                 // chart.
-                labels: ['Total Order'],
+                labels: ['Orden Total'],
                 barColors: ['blue'],
                 gridTextColor : '#000',
                 gridTextSize: '15px',
@@ -171,7 +171,7 @@
                 ykeys: ['value'],
                 // Labels for the ykeys -- will be displayed when you hover over the
                 // chart.
-                labels: ['Total Order'],
+                labels: ['Orden Total'],
                 barColors: ['green'],
                 gridTextColor : '#000',
                 gridTextSize: '15px',

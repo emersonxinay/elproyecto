@@ -28,7 +28,7 @@
                     <select name="dish" id="dish" required class="form-control">
                         <option value="">Seleccione Uno</option>
                         @foreach($dishes as $dish)
-                            <option value="{{$dish->id}}">{{$dish->dish}}</option>
+                            <option value="{{ $dish->id }}">{{$dish->dish}}</option>
                         @endforeach
                     </select>
                 </div>
@@ -125,13 +125,15 @@
             // Dish Dropdown on change event
             $("#dish").on('change', function () {
                 dish_id = $(this).val();
+                console.log('Seleccionamos '.dish_id);
                 dish_type_id = '';
                 $.get('/dish-types/' + dish_id, function (data) {
                     dish_info = data;
                     $("#dishType").empty();
                     $("#dishType").append(
                         $("<option>", {text: "Select Dish Type"})
-                    )
+                    );
+
                     $.each(data, function (index, dish_type) {
                         $("#dishType").append(
                             $("<option>", {text: dish_type.dish_type, val: dish_type.id})

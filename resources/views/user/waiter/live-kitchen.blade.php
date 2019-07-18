@@ -8,13 +8,13 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <button id="refresh" type="button" class="btn btn-default waves-effect" data-toggle="dropdown" aria-expanded="false">Refresh <span class="m-l-5"><i class="fa fa-cog"></i></span></button>
+                <button id="refresh" type="button" class="btn btn-default waves-effect" data-toggle="dropdown" aria-expanded="false">Actualizar <span class="m-l-5"><i class="fa fa-cog"></i></span></button>
             </div>
 
             <h4 class="page-title">{{config('app.name')}}</h4>
             <ol class="breadcrumb">
-                <li><a href="{{url('/')}}">Dashboard</a></li>
-                <li><a href="{{url('/kitchen-status')}}">Kitchen Status</a></li>
+                <li><a href="{{url('/')}}">Panel</a></li>
+                <li><a href="{{url('/kitchen-status')}}">Estado de la Cocina</a></li>
             </ol>
         </div>
     </div>

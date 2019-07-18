@@ -10,10 +10,10 @@
         <form class="form-horizontal" role="form" method="post" action="{{url('/dish-stat-post')}}" id="formMe" data-parsley-validate novalidate>
             {{csrf_field()}}
             <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Dish</label>
+                <label for="inputEmail3" class="col-sm-2 control-label">Plato</label>
                 <div class="col-sm-7">
                     <select name="kitchen" id="" class="form-control">
-                        <option value="0">All</option>
+                        <option value="0">Todos</option>
                         @foreach($dishes as $dish)
                             <option value="{{$dish->id}}">{{$dish->dish}}</option>
                         @endforeach
@@ -21,39 +21,39 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="hori-pass1" class="col-sm-2 control-label">Date Range</label>
+                <label for="hori-pass1" class="col-sm-2 control-label">Rango de Fecha</label>
                 <div class="col-sm-7">
                     <div class="input-daterange input-group" id="date-range">
                         <input type="text" class="form-control" name="start" />
-                        <span class="input-group-addon bg-custom b-0 text-white">to</span>
+                        <span class="input-group-addon bg-custom b-0 text-white">a</span>
                         <input type="text" class="form-control" name="end" />
                     </div>
                 </div>
             </div>
             <div class="form-group  m-b-0">
                 <button class="col-md-offset-2 btn btn-primary waves-effect waves-light" type="submit">
-                    Submit
+                    Enviar
                 </button>
                 <button type="reset" class="btn btn-default waves-effect waves-light m-l-5">
-                    Cancel
+                    Cancelar
                 </button>
             </div>
         </form>
         <hr>
         <center>
-            <h4>{{$selected_dish->dish}} | Total Order : {{count($selected_dish->orderDish)}} </h4>
-            <p>From <b>{{$start}}</b> to <b> {{$end}}</b></p>
+            <h4>{{$selected_dish->dish}} | Orden Total : {{count($selected_dish->orderDish)}} </h4>
+            <p>Desde<b>{{$start}}</b> a <b> {{$end}}</b></p>
         </center>
         <table id="datatable-responsive"
                class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0"
                width="100%">
             <thead>
             <tr>
-                <th>Order No</th>
-                <th>Quantity</th>
-                <th>Net Price</th>
-                <th>Gross Price</th>
-                <th>Date(d-m-y)</th>
+                <th>Nº de Orden</th>
+                <th>Cantidad</th>
+                <th>Precio Neto</th>
+                <th>Precio Bruto</th>
+                <th>Fecha(d-m-y)</th>
             </tr>
             </thead>
             <tbody>

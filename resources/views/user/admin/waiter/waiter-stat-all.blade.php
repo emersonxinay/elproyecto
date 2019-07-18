@@ -49,7 +49,7 @@
 
         <center>
             <h4 class="text-dark header-title m-t-0">ESTADO DE COCINA</h4>
-            <p>Date Range : {{$start}} to {{$end}}</p>
+            <p>Rango de Fecha : {{$start}} a {{$end}}</p>
         </center>
         <div id="kitchenGraph" style="height: 303px;">
 
@@ -64,7 +64,7 @@
                    width="100%">
                 <thead>
                 <tr>
-                    <th>No Orden</th>
+                    <th>Nº Orden</th>
                     <th>Servido Por:</th>
                     <th>Valor del Pedido</th>
                     <th>Cocina</th>
@@ -138,7 +138,7 @@
                 ykeys: ['value'],
                 // Labels for the ykeys -- will be displayed when you hover over the
                 // chart.
-                labels: ['Total Order'],
+                labels: ['Orden Total'],
                 barColors: ['orangered'],
                 gridTextColor: '#000',
                 gridTextSize: '15px',

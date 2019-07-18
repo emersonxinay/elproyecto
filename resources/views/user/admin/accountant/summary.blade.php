@@ -14,28 +14,28 @@
                         <div class="widget-inline-box text-center">
                             <h3><i class="text-primary md md-add-shopping-cart"></i> <b data-plugin="counterup">8954</b>
                             </h3>
-                            <h4 class="text-muted">Lifetime total sales</h4>
+                            <h4 class="text-muted">Vendas totales de po vida</h4>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-sm-6">
                         <div class="widget-inline-box text-center">
                             <h3><i class="text-custom md md-attach-money"></i> <b data-plugin="counterup">7841</b></h3>
-                            <h4 class="text-muted">Income amounts</h4>
+                            <h4 class="text-muted">Montos de Ingreso</h4>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-sm-6">
                         <div class="widget-inline-box text-center">
                             <h3><i class="text-pink md md-account-child"></i> <b data-plugin="counterup">6521</b></h3>
-                            <h4 class="text-muted">Total users</h4>
+                            <h4 class="text-muted">Usuarios Totales</h4>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-sm-6">
                         <div class="widget-inline-box text-center b-0">
                             <h3><i class="text-purple md md-visibility"></i> <b data-plugin="counterup">325</b></h3>
-                            <h4 class="text-muted">Total visits</h4>
+                            <h4 class="text-muted">Vsitas Totales</h4>
                         </div>
                     </div>
 

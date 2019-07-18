@@ -16,42 +16,42 @@
                                 {{csrf_field()}}
 
                                 <div class="form-group">
-                                    <label for="" class="col-md-2 control-label">Photo</label>
+                                    <label for="" class="col-md-2 control-label">Foto</label>
                                     <div class="col md-10">
                                         <div id="image-preview" style="background-image: url({{url(auth()->user()->image != "" | null ? auth()->user()->image : '/img_assets/avater.png')}})">
-                                            <label for="image-upload" id="image-label">Choose Photo</label>
+                                            <label for="image-upload" id="image-label">Suba una Foto</label>
                                             <input type="file" name="thumbnail" id="image-upload"/>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-md-2 control-label">Full Name :</label>
+                                    <label class="col-md-2 control-label">Nombre Completo :</label>
                                     <div class="col-md-8">
                                         <input type="text" name="name" class="form-control" value="{{auth()->user()->name}}"
-                                               placeholder="Employee Name" parsley-trigger="change" maxlength="50" required>
+                                               placeholder="Nombre del Empleado" parsley-trigger="change" maxlength="50" required>
 
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-2 control-label" for="example-email">Email</label>
                                     <div class="col-md-8">
-                                        <input type="email" name="email" class="form-control" value="{{auth()->user()->email}}" placeholder="Employee Email"
+                                        <input type="email" name="email" class="form-control" value="{{auth()->user()->email}}" placeholder="Email"
                                                parsley-trigger="change" maxlength="50" required>
 
                                     </div>
                                 </div>
                                 @if(auth()->user()->role != 1)
                                 <div class="form-group">
-                                    <label class="col-md-2 control-label">Phone </label>
+                                    <label class="col-md-2 control-label">Telefono </label>
                                     <div class="col-md-8">
-                                        <input type="text" maxlength="20" name="phone"  placeholder="Phone number" class="form-control"
+                                        <input type="text" maxlength="20" name="phone"  placeholder="Telefono" class="form-control"
                                                value="{{auth()->user()->role != 1 ? auth()->user()->employee->phone : ''}}" data-parsley-type="digits" required>
 
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-2 control-label">Address :</label>
+                                    <label class="col-md-2 control-label">Direccion:</label>
                                     <div class="col-md-8">
                                     <textarea minlength="10" class="form-control" required name="address"
                                               rows="5">{{auth()->user()->role != 1 ? auth()->user()->employee->address : ''}}</textarea>
@@ -61,10 +61,10 @@
                                 <div class="form-group">
                                     <label class="col-md-2 control-label"></label>
                                     <div class="col-md-10">
-                                        <button type="submit" class="ladda-button btn btn-purple" data-style="expand-right">Update Profile
+                                        <button type="submit" class="ladda-button btn btn-purple" data-style="expand-right">Actualizar
 
                                         </button>
-                                        <a href="#" data-toggle="modal" data-target="#myModal" class="btn btn-link">Change Password</a>
+                                        <a href="#" data-toggle="modal" data-target="#myModal" class="btn btn-link">Cambia la Contraseña</a>
                                     </div>
                                 </div>
 
@@ -81,28 +81,28 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">Change Password</h4>
+                    <h4 class="modal-title">Cambia la Contraseña</h4>
                 </div>
                 <div class="modal-body">
                     <form action="#" method="post" id="passForm" data-parsley-validate novalidate>
                         {{csrf_field()}}
                         <div class="form-group">
-                            <label for="">Current Password</label>
+                            <label for="">Contraseña Actual</label>
                             <input required type="password" name="current_password" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="">New Password</label>
+                            <label for="">Nueva Contraseña</label>
                             <input required type="password" name="new_password" id="pass1" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="">Re-type New Password</label>
+                            <label for="">Repite la Contraseña</label>
                             <input  data-parsley-equalto="#pass1" required type="password" class="form-control">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button id="submitChangePassForm" type="button" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button id="submitChangePassForm" type="button" class="btn btn-primary">Enviar</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->

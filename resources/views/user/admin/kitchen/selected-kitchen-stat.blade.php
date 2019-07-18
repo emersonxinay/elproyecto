@@ -10,10 +10,10 @@
               data-parsley-validate novalidate>
             {{csrf_field()}}
             <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Kitchen</label>
+                <label for="inputEmail3" class="col-sm-2 control-label">Cocina</label>
                 <div class="col-sm-7">
                     <select name="kitchen" id="" class="form-control">
-                        <option value="0">All</option>
+                        <option value="0">Todos</option>
                         @foreach($kitchen as $k)
                             <option value="{{$k->id}}">{{$k->name}}</option>
                         @endforeach
@@ -21,18 +21,18 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="hori-pass1" class="col-sm-2 control-label">Date Range</label>
+                <label for="hori-pass1" class="col-sm-2 control-label">Rango de Fechas</label>
                 <div class="col-sm-7">
                     <div class="input-daterange input-group" id="date-range">
                         <input type="text" class="form-control" name="start"/>
-                        <span class="input-group-addon bg-custom b-0 text-white">to</span>
+                        <span class="input-group-addon bg-custom b-0 text-white">a</span>
                         <input  type="text" class="form-control" name="end"/>
                     </div>
                 </div>
             </div>
             <div class="form-group  m-b-0">
                 <button class="col-md-offset-2 btn btn-primary waves-effect waves-light" type="submit">
-                    Submit
+                   Enviar
                 </button>
                 <button type="reset" class="btn btn-default waves-effect waves-light m-l-5">
                     Cancel
@@ -42,18 +42,18 @@
         <hr>
         <center>
             <h4 class="m-t-0 header-title"><b>{{$selected_kitchen->name}}</b></h4>
-            <p>Date Ranage : {{$start}} to {{ $end }}</p>
+            <p>Rango de Fecha : {{$start}} a {{ $end }}</p>
         </center>
         <table id="datatable-responsive"
                class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0"
                width="100%">
             <thead>
             <tr>
-                <th>Order No</th>
-                <th>Served By</th>
-                <th>Order Value</th>
-                <th>Kitchen</th>
-                <th>Date(d-m-y)</th>
+                <th>Nº de pedido</th>
+                <th>Servido Por</th>
+                <th>Valor de la Orden</th>
+                <th>Cocina</th>
+                <th>Fecha(d-m-y)</th>
             </tr>
             </thead>
             <tbody>
@@ -90,6 +90,9 @@
                 format: "yyyy-mm-dd"
             });
             $("#datatable-responsive").DataTable({
+                "language": {
+                  "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                },
                 order: [0, 'desc'],
                 dom: 'Bfrtip',
                 buttons: [

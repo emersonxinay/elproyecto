@@ -16,7 +16,7 @@
 <div class="wrapper-page">
     <div class=" card-box">
         <div class="panel-heading">
-            <h3 class="text-center"> Ingresa a <strong class="text-orange my-logo">Restaurant Pepita</strong> </h3>
+            <h3 class="text-center"> Ingresa a <strong class="text-orange my-logo">Restaurante Pepita</strong> </h3>
             {{--{{request()->getHttpHost()}}--}}
             {{--{{request()->getHost()}}--}}
         </div>
@@ -67,7 +67,7 @@
 
                 <div class="form-group m-t-30 m-b-0">
                     <div class="col-sm-12">
-                        <a href="{{ route('password.request') }}" class="text-dark"><i class="fa fa-lock m-r-5"></i> Perdiste tu Password?</a>
+                        <a href="{{ route('password.request') }}" class="text-dark"><i class="fa fa-lock m-r-5"></i> ¿No Recuerdas tu Contraseña?</a>
                     </div>
                 </div>
             </form>
@@ -76,7 +76,7 @@
     </div>
     <div class="row">
         <div class="col-sm-12 text-center">
-            <p>Don't have an account? <a href="{{ route('register') }}" class="text-primary m-l-5"><b>Sign Up</b></a></p>
+            <p>¿No tienes Una Cuenta? <a href="{{ route('register') }}" class="text-primary m-l-5"><b>Registrate</b></a></p>
 
         </div>
     </div>

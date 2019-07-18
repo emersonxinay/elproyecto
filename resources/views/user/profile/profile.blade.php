@@ -11,14 +11,13 @@
                 <img src="{{auth()->user()->image ? auth()->user()->image : 'img_assets/default-thumbnail.jpg'}}"
                      class="img-responsive img-circle" width="250px" alt="">
                 <h3>{{auth()->user()->name}}</h3>
-                <p>Role : <b> @if(auth()->user()->role ==1) Admin @elseif(auth()->user()->role ==2) Resturant
-                    Manager @elseif(auth()->user()->role ==3) Kitchen @else Waiter @endif</b>
+                <p>Rol : <b> @if(auth()->user()->role ==1) Administrador @elseif(auth()->user()->role ==2) Gerente del Restaurante @elseif(auth()->user()->role ==3) Cocinero @else Camarero @endif</b>
                     <br>
-                    Registered Science : {{auth()->user()->created_at->format('d-M-Y')}}
+                    Registro : {{auth()->user()->created_at->format('d-M-Y')}}
                     <br>
                     @if(auth()->user()->role != 1)
-                        Phone : {{auth()->user()->employee->phone}} <br>
-                        Address : {{auth()->user()->employee->address}}
+                        Telefono : {{auth()->user()->employee->phone}} <br>
+                        Direccion : {{auth()->user()->employee->address}}
                     @endif
                 </p>
             </div>

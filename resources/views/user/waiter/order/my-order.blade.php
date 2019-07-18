@@ -7,11 +7,11 @@
 @section('content')
     <div class="card-box table-responsive">
 
-        <h4 class="m-t-0 header-title"><b>All Order</b></h4>
+        <h4 class="m-t-0 header-title"><b>Todas las Ordenes</b></h4>
         <p class="text-muted font-13 m-b-30">
-            Responsive is an extension for DataTables that resolves that problem by optimising the
+           <!-- Responsive is an extension for DataTables that resolves that problem by optimising the
             table's layout for different screen sizes through the dynamic insertion and removal of
-            columns from the table.
+            columns from the table.-->
         </p>
 
         <table id="datatable-responsive"
@@ -20,11 +20,11 @@
             <thead>
             <tr>
                 {{--<th>#</th>--}}
-                <th>Order No</th>
-                <th>Served By</th>
-                <th>Status</th>
-                <th>Order Value</th>
-                <th width="120px">Action</th>
+                <th>Orden No</th>
+                <th>Servido Por :</th>
+                <th>Estado</th>
+                <th>Valor del Pedido</th>
+                <th width="120px">Acciones</th>
             </tr>
             </thead>
             <?php $count = 1; ?>
@@ -60,13 +60,16 @@
             </tbody>
         </table>
     </div>
-    All Order
+    Todas las Ordenes
 @endsection
 
 @section('extra-js')
     <script>
         $(document).ready(function () {
             $("#datatable-responsive").DataTable({
+                "language": {
+                  "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                },
                 "order": [[ 0, "desc" ]]
             });
         })

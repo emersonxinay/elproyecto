@@ -8,7 +8,7 @@
                 <h3 class="text-dark"><b class="counter">
                         {{count(\App\Model\Order::where('served_by',auth()->user()->id)->get())}}
                     </b></h3>
-                <p class="text-muted">Total Order</p>
+                <p class="text-muted">Orden Total</p>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -23,7 +23,7 @@
                 <h3 class="text-dark"><b class="counter">
                         {{count(\App\Model\Order::where('served_by',auth()->user()->id)->where('created_at','like','%'.Carbon\Carbon::now()->format('Y-m-d').'%')->get())}}
                     </b></h3>
-                <p class="text-muted">Order Today</p>
+                <p class="text-muted">Ordenes de Hoy</p>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -36,7 +36,7 @@
             </div>
             <div class="text-right">
                 <h3 class="text-dark"><b class="counter">{{count(\App\Model\Order::where('served_by',auth()->user()->id)->where('status',0)->get())}}</b></h3>
-                <p class="text-muted">Pending Order to Kitchen</p>
+                <p class="text-muted">Orden Pendiente a la Cocina</p>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -49,7 +49,7 @@
             </div>
             <div class="text-right">
                 <h3 class="text-dark"><b class="counter">{{count(\App\Model\Order::where('served_by',auth()->user()->id)->where('status',2)->get())}}</b></h3>
-                <p class="text-muted">Pending Orde to Serve</p>
+                <p class="text-muted">Orden Pendiente por dia</p>
             </div>
             <div class="clearfix"></div>
         </div>

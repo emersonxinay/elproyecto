@@ -33,13 +33,13 @@
             <table class="datatable-responsive table table-striped table-bordered dt-responsive nowrap">
                 <thead>
                 <tr>
-                    <th>Order No</th>
-                    <th>Served By</th>
-                    <th>Order Value</th>
-                    <th>Kitchen</th>
-                    <th>Waiter</th>
-                    <th>Status</th>
-                    <th width="120px">Action</th>
+                    <th>Orden No</th>
+                    <th>Servido Por</th>
+                    <th>Valor del Pedido</th>
+                    <th>Cocina</th>
+                    <th>Camarero</th>
+                    <th>Estado</th>
+                    <th width="120px">Accion</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -55,7 +55,7 @@
                             <td>{{$o->servedBy->name}}</td>
                             <td>
                                 @if($o->status == 0)
-                                <p class="text-warning">Pending...</p>
+                                <p class="text-warning">Pendiente...</p>
                                 @elseif($o->status == 1)
                                 Cooking...
                                 @elseif($o->status == 2)

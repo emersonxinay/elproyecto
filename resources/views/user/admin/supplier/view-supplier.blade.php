@@ -13,43 +13,43 @@
             </center>
             <dl class="dl-horizontal m-b-0">
                 <dt>
-                    Phone Number :
+                    Telefono :
                 </dt>
                 <dd>
                     {{$supplier->phone}}
                 </dd>
                 <dt>
-                    Email Address :
+                    Email :
                 </dt>
                 <dd>
                     {{$supplier->email}}
                 </dd>
                 <dt>
-                    Address :
+                    Direccion :
                 </dt>
                 <dd>
                     {{$supplier->address}}
                 </dd>
                 <dt>
-                    Status :
+                    Estado :
                 </dt>
                 <dd>
                     {{$supplier->status == 1 ? "Active" : "In-Active"}}
                 </dd>
                 <dt>
-                    Added By :
+                    Añadido Por :
                 </dt>
                 <dd>
                     {{$supplier->user->name}}
                 </dd>
                 <dt>
-                    Total Purses :
+                    Bolso Total :
                 </dt>
                 <dd>
                    {{count($supplier->purses)}} Time(s)
                 </dd>
                 <dt>
-                    Total Payment :
+                    Pago Total :
                 </dt>
                 <dd>
                     {{count($supplier->payment->sum('payment_amount'))}} Time(s)
@@ -57,20 +57,20 @@
             </dl>
             <hr>
             <center>
-                <h4 class="header-title">{{$supplier->name}} - All Purses</h4>
+                <h4 class="header-title">{{$supplier->name}} - Todo los Bolsos/h4>
             </center>
             <hr>
             <div class="table-responsive">
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>Date</th>
-                        <th>Purses Id</th>
-                        <th>Purses Value</th>
-                        <th>Purses By</th>
-                        <th>Supplied By</th>
+                        <th>Fecha</th>
+                        <th>Bolsos Id</th>
+                        <th>Valor de los Bolsos</th>
+                        <th>Bolso por</th>
+                        <th>Suministrado por</th>
                         <th>Status</th>
-                        <th width="120px">Action</th>
+                        <th width="120px">Acciones</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -88,9 +88,9 @@
                             <td>{{$purse->supplier->name}} </td>
                             <td>
                                 @if($pursesValue-$pursesPayment <= 0)
-                                    Paid
+                                    Pagado
                                 @else
-                                    Not Paid
+                                    No Pagado
                                 @endif
 
                             </td>
@@ -112,15 +112,15 @@
                         </tr>
                     @endforeach
                     <tr>
-                        <th>Total purses value:</th>
+                        <th>Valor total de los Bolsos:</th>
                         <th>{{$totalPursesAmount}}</th>
                     </tr>
                     <tr>
-                        <th>Total Payment:</th>
+                        <th>Pago Total:</th>
                         <th>{{$totalPursesPayment}}</th>
                     </tr>
                     <tr>
-                        <th>Status:</th>
+                        <th>Estado:</th>
                         <th>{{$totalPursesPayment - $totalPursesAmount}}</th>
                     </tr>
                     </tbody>
@@ -128,7 +128,7 @@
 
                 <hr>
                 <center>
-                    <h4 class="header-title">{{$supplier->name}} - All Payment</h4>
+                    <h4 class="header-title">{{$supplier->name}} - Todos los Pagos</h4>
                 </center>
                 <hr>
                 <div class="table-responsive">
@@ -136,10 +136,10 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Purses Id</th>
-                            <th>Date</th>
-                            <th class="text-right">Amount</th>
-                            <th>Payied By</th>
+                            <th>Bolsos Id</th>
+                            <th>Fecha</th>
+                            <th class="text-right">Cantidad</th>
+                            <th>Pagado por</th>
                         </tr>
                         </thead>
                         <tboody>

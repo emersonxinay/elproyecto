@@ -26,7 +26,7 @@
                     <a href="javascript:void(0);" class="waves-effect"><i class="icon icon-fire"></i> <span> Cocina </span> <span class="menu-arrow"></span> </a>
                     <ul class="list-unstyled">
                         <li><a href="{{url('/live-kitchen')}}">Cocinando</a></li>
-                        {{--<li><a href="{{url('/kitchen-stat')}}">Kitchen Statistics</a></li>--}}
+                        {{--<li><a href="{{url('/kitchen-stat')}}">Estadisticas de Cocina</a></li>--}}
                     </ul>
                 </li>
 
@@ -82,7 +82,7 @@
                     <ul class="list-unstyled">
                         <li><a href="{{url('/new-purses')}}">Nuevo Producto</a></li>
                         <li><a href="{{url('/all-purses')}}">Todos los Productos</a></li>
-                        <li><a href="{{url('/add-item')}}">Agregar Item</a></li>
+                        <li><a href="{{url('/add-item')}}">Subir Producto</a></li>
                         <li><a href="{{url('/all-item')}}">Todo el Stock</a></li>
                     </ul>
                 </li>
@@ -95,7 +95,7 @@
                     </ul>
                 </li>
 
-                <li class="text-muted menu-title">More</li>
+                <li class="text-muted menu-title">Más</li>
 
                 <li class="has_sub">
                     <a href="javascript:void(0);" class="waves-effect"><i class="icon icon-people"></i><span> Colaboradores </span> <span class="menu-arrow"></span></a>

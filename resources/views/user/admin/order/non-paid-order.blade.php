@@ -90,13 +90,13 @@
                     <td>{{$order->kitchen ? $order->kitchen->name : "No-Kitchen"}}</td>
                     <td>
                         @if($order->status == 0)
-                            <span class="text-warning">Pending.....</span>
+                            <span class="text-warning">Pendiente...</span>
                         @elseif($order->status == 1)
-                            <i>Cooking.....</i>
+                            <i>Cocinando...</i>
                         @elseif($order->status == 2)
-                            <b class="text-custom"><i>Cooked !</i></b>
+                            <b class="text-custom"><i>Preparado !</i></b>
                         @elseif($order->status == 3)
-                            <b class="text-danger"> Served !</b>
+                            <b class="text-danger"> Servido!</b>
                         @else
                             Unknown Status
                         @endif

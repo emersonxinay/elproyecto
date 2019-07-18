@@ -16,17 +16,17 @@
                     <center>
                         <h2>{{config('app.name')}}</h2>
                         <p>
-                            Phone : {{config('restaurant.contact.phone')}}
+                            Telefono : {{config('restaurant.contact.phone')}}
                             <br>
-                            Address :  {{config('restaurant.contact.address')}}
+                            Direccion :  {{config('restaurant.contact.address')}}
                             <br>
                             Vat Reg No : {{config('restaurant.vat.vat_number')}}
                             <br>
-                            Served By : {{$order->servedBy->name}}
+                            Servido por : {{$order->servedBy->name}}
                             <br>
-                            Table : {{$order->table_id}}
+                            Mesa : {{$order->table_id}}
                             <br>
-                            Order NO : {{str_pad($order->id,4,0,STR_PAD_LEFT)}}
+                            Orden No : {{str_pad($order->id,4,0,STR_PAD_LEFT)}}
                         </p>
                     </center>
                     <div class="m-h-50"></div>
@@ -35,10 +35,10 @@
                             <div class="table-responsive">
                                 <table class="table m-t-30">
                                     <thead>
-                                    <tr><th>Quantity</th>
+                                    <tr><th>Cantidad</th>
                                         <th>Item</th>
-                                        <th>Price</th>
-                                        <th>T. Price</th>
+                                        <th>Precio</th>
+                                        <th>T. Precio</th>
                                     </tr></thead>
                                     <tbody>
                                     @foreach($order->orderPrice as $orderDetails)
@@ -71,15 +71,15 @@
                                         <th class="text-right">{{$order->vat}} %</th>
                                     </tr>
                                     <tr>
-                                        <td class="text-right">Gross Total :</td>
+                                        <td class="text-right">Precio Bruto Total:</td>
                                         <th class="text-right">{{config('restaurant.currency.symbol')}} {{$order->orderPrice->sum('gross_price')+($order->orderPrice->sum('gross_price')*$order->vat)/100}} {{config('restaurant.currency.currency')}}</th>
                                     </tr>
                                     <tr>
-                                        <td class="text-right">Payment :</td>
+                                        <td class="text-right">Pago :</td>
                                         <th class="text-right">{{config('restaurant.currency.symbol')}} {{$order->payment}} {{config('restaurant.currency.currency')}}</th>
                                     </tr>
                                     <tr>
-                                        <td class="text-right">Change :</td>
+                                        <td class="text-right">Cambio :</td>
                                         <th class="text-right">{{config('restaurant.currency.symbol')}} {{$order->change_amount}} {{config('restaurant.currency.currency')}}</th>
                                     </tr>
                                     </tbody>
@@ -92,9 +92,9 @@
                         @if($order->status > 2)
                         <div class="pull-right">
                             @if($order->user_id == 0)
-                            <a href="#" id="submit" class="btn btn-primary waves-effect waves-light">Submit and Print</a>
+                            <a href="#" id="submit" class="btn btn-primary waves-effect waves-light">Enviar e imprimir</a>
                             @else
-                                <button id="print" class="btn btn-success waves-effect waves-light"><i class="fa fa-print"></i>Print</button>
+                                <button id="print" class="btn btn-success waves-effect waves-light"><i class="fa fa-print"></i>Imprimir</button>
                             @endif
                         </div>
                        @endif

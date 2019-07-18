@@ -7,11 +7,11 @@
 @section('content')
 
     <div class="card-box table-responsive">
-        <h4 class="m-t-0 header-title"><b>All Recipe</b></h4>
+        <h4 class="m-t-0 header-title"><b>Todas las Recetas</b></h4>
         <p class="text-muted font-13 m-b-30">
-            Responsive is an extension for DataTables that resolves that problem by optimising the
+           <!-- Responsive is an extension for DataTables that resolves that problem by optimising the
             table's layout for different screen sizes through the dynamic insertion and removal of
-            columns from the table.
+            columns from the table.-->
         </p>
 
         <table id="datatable-responsive"
@@ -20,9 +20,9 @@
             <thead>
             <tr>
                 <th width="15px">#</th>
-                <th width="150px">Recipe One</th>
-                <th width="50px">Dish Name</th>
-                <th width="20px">Action</th>
+                <th width="150px">Receta Una</th>
+                <th width="50px">Nombre del Plato</th>
+                <th width="20px">Acciones</th>
             </tr>
             </thead>
             <?php $count = 1; ?>
@@ -38,19 +38,19 @@
                     {{--</td>--}}
                     {{--<td>--}}
                         {{--@foreach($dish->dishPrices as $price)--}}
-                            {{--<span>Dish Type : {{$price->dish_type}}</span>--}}
+                            {{--<span>Plato Tipo : {{$price->dish_type}}</span>--}}
                             {{--<span class="">- ${{$price->price}} BDT</span>--}}
                             {{--<br>--}}
                         {{--@endforeach--}}
                     {{--</td>--}}
                     {{--<td>--}}
-                        {{--<a href="#">Click to view dish images</a>--}}
+                        {{--<a href="#">Haga Clic para ver las Imagenes del Plato</a>--}}
                     {{--</td>--}}
                     {{--<td>--}}
                         {{--@if($dish->available)--}}
-                            {{--<p>Available</p>--}}
+                            {{--<p>Disponible</p>--}}
                         {{--@else--}}
-                            {{--<p>Not-Available</p>--}}
+                            {{--<p>No Disponible</p>--}}
                         {{--@endif--}}
                     {{--</td>--}}
                     {{--<td>--}}

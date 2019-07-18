@@ -8,22 +8,22 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="btn-group pull-right m-t-15">
-                <a href="{{url('/all-table')}}" class="btn btn-default waves-effect">All Expense <span class="m-l-5"></span></a>
+                <a href="{{url('/all-table')}}" class="btn btn-default waves-effect">Todos los Gastos <span class="m-l-5"></span></a>
             </div>
 
-            <h4 class="page-title">New Expanse </h4>
+            <h4 class="page-title">Modificar Gasto </h4>
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">Inicio</a>
                 </li>
                 <li>
-                    <a href="#">Accounting</a>
+                    <a href="#">Contabilidad</a>
                 </li>
                 <li class="active">
-                    Expanse
+                    Gasto
                 </li>
                 <li class="active">
-                    New Expanse
+                    Modificar Gastos
                 </li>
             </ol>
         </div>
@@ -34,27 +34,27 @@
             <form class="form-horizontal" role="form" method="post" id="expanseForm" action="#" data-parsley-validate novalidate>
                 {{csrf_field()}}
                 <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-3 control-label">Cause Of Expanse :</label>
+                    <label for="inputEmail3" class="col-sm-3 control-label">Motivo del Gasto :</label>
                     <div class="col-sm-6">
-                        <input type="text" value="{{$expanse->title}}" name="title" required class="form-control" id="inputEmail3" placeholder="Cause of expanse">
+                        <input type="text" value="{{$expanse->title}}" name="title" required class="form-control" id="inputEmail3" placeholder="Motivo del Gasto">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-3 control-label">Date of Expanse :</label>
+                    <label for="inputPassword3" class="col-sm-3 control-label">Fecha del Gasto :</label>
                     <div class="col-sm-6">
                         <input type="text" value="{{\Carbon\Carbon::parse($expanse->date)->format('m/d/Y')}}" name="date" required class="form-control" placeholder="mm/dd/yyyy" id="datepicker-autoclose">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputPassword4" class="col-sm-3 control-label">Expanse Cost</label>
+                    <label for="inputPassword4" class="col-sm-3 control-label">Costo Total</label>
                     <div class="col-sm-6">
-                        <input type="text" value="{{$expanse->expanse}}" name="expanse" required  data-parsley-type="number" class="form-control" id="inputPassword4" placeholder="Cost ">
+                        <input type="text" value="{{$expanse->expanse}}" name="expanse" required  data-parsley-type="number" class="form-control" id="inputPassword4" placeholder="Costo ">
                     </div>
                 </div>
 
                 <div class="form-group m-b-0">
                     <div class="col-sm-offset-3 col-sm-9">
-                        <button type="submit" class="btn btn-success waves-effect waves-light">Update now</button>
+                        <button type="submit" class="btn btn-success waves-effect waves-light">Guardar</button>
                     </div>
                 </div>
             </form>

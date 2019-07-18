@@ -15,10 +15,10 @@
                   data-parsley-validate novalidate>
                 {{csrf_field()}}
                 <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">Kitchen</label>
+                    <label for="inputEmail3" class="col-sm-2 control-label">Cocina</label>
                     <div class="col-sm-7">
                         <select name="kitchen" id="" class="form-control">
-                            <option value="0">All</option>
+                            <option value="0">Todo</option>
                             @foreach($kitchen as $k)
                                 <option value="{{$k->id}}">{{$k->name}}</option>
                             @endforeach
@@ -26,21 +26,21 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="hori-pass1" class="col-sm-2 control-label">Date Range</label>
+                    <label for="hori-pass1" class="col-sm-2 control-label">Rango de Fecha</label>
                     <div class="col-sm-7">
                         <div class="input-daterange input-group" id="date-range">
                             <input type="text" class="form-control" name="start"/>
-                            <span class="input-group-addon bg-custom b-0 text-white">to</span>
+                            <span class="input-group-addon bg-custom b-0 text-white">a</span>
                             <input  type="text" class="form-control" name="end"/>
                         </div>
                     </div>
                 </div>
                 <div class="form-group  m-b-0">
                     <button class="col-md-offset-2 btn btn-primary waves-effect waves-light" type="submit">
-                        Submit
+                        Enviar
                     </button>
                     <button type="reset" class="btn btn-default waves-effect waves-light m-l-5">
-                        Cancel
+                        Cancelar
                     </button>
                 </div>
             </form>
@@ -48,15 +48,15 @@
 
 
         <center>
-            <h4 class="text-dark header-title m-t-0">Kitchen Stat</h4>
-            <p>Date Range : {{$start}} to {{$end}}</p>
+            <h4 class="text-dark header-title m-t-0">Estado de Cocina</h4>
+            <p>Rango de Fecha : {{$start}} a {{$end}}</p>
         </center>
         <div id="kitchenGraph" style="height: 303px;">
 
         </div>
 
         @foreach($kitchen as $k)
-            {{--<h4 class="pull-right">{{count($orders)}}   Order</h4>--}}
+            {{--<h4 class="pull-right">{{count($orders)}}   Orden</h4>--}}
             <h4>{{$k->name}}</h4>
             <br>
             <table id="datatable-responsive"
@@ -64,11 +64,11 @@
                    width="100%">
                 <thead>
                 <tr>
-                    <th>Order No</th>
-                    <th>Served By</th>
-                    <th>Order Value</th>
-                    <th>Kitchen</th>
-                    <th>Date(d-m-y)</th>
+                    <th>Nº de Pedido</th>
+                    <th>Servido Por</th>
+                    <th>Valor de la Orden</th>
+                    <th>Cocina</th>
+                    <th>Fecha(d-m-y)</th>
                 </tr>
                 </thead>
                 @foreach($orders as $order)
@@ -138,7 +138,7 @@
                 ykeys: ['value'],
                 // Labels for the ykeys -- will be displayed when you hover over the
                 // chart.
-                labels: ['Total Order'],
+                labels: ['Orden Total'],
                 barColors: ['orangered'],
                 gridTextColor: '#000',
                 gridTextSize: '15px',

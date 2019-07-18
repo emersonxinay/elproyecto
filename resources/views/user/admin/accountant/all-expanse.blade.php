@@ -43,7 +43,7 @@
             ?>
 
             <h3>{{$expanse[0]->created_at->format('M-Y')}} -
-                <small>Total expanse :
+                <small>Gasto Total :
                 </small> {{config('restaurant.currency.symbol')}} {{number_format($expanse->sum('expanse')+$purses_cost ,2)}}  {{config('restaurant.currency.currency')}}
             </h3>
             <h4>
@@ -63,11 +63,11 @@
                        width="100%">
                     <thead>
                     <tr>
-                        <th>Month</th>
-                        <th>Coz if expanse</th>
-                        <th> Value</th>
-                        <th>Expanse By</th>
-                        <th>Date</th>
+                        <th>Mes</th>
+                        <th>Motivo del Gasto</th>
+                        <th> Valor</th>
+                        <th>Hecho por:</th>
+                        <th>Fecha</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -112,6 +112,9 @@
     <script>
         $(document).ready(function () {
             $(".datatable-responsive").DataTable({
+                  "language": {
+                  "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                },
                 order: [0, 'desc'],
                 dom: 'Bfrtip',
                 buttons: [

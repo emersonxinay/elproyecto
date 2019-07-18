@@ -18,30 +18,30 @@
             <input type="hidden" value="{{$order->id}}" id="order_id">
             <div class="form-group">
                 <input type="hidden" value="{{$order->table_id}}">
-                <label for="hori-pass1" class="col-sm-2 control-label">Select Dish*</label>
+                <label for="hori-pass1" class="col-sm-2 control-label">Seleccione el Plato*</label>
                 <div class="col-sm-2">
                     <select name="dish" id="dish" required class="form-control">
-                        <option value="">Select One</option>
+                        <option value="">Seleccione Uno</option>
                         @foreach($dishes as $dish)
                             <option value="{{$dish->id}}">{{$dish->dish}}</option>
                         @endforeach
                     </select>
                 </div>
 
-                <label for="hori-pass2" class="col-sm-1 control-label">Dish Type *</label>
+                <label for="hori-pass2" class="col-sm-1 control-label">Tipo de Plato*</label>
                 <div class="col-sm-2">
                     <select name="dish_type" id="dishType" required class="form-control">
-                        <option value="">Select One</option>
+                        <option value="">Seleccione Uno</option>
                     </select>
                 </div>
 
-                <label for="webSite" class="col-sm-1 control-label">Quantity</label>
+                <label for="webSite" class="col-sm-1 control-label">Cantidad</label>
                 <div class="col-sm-1">
                     <input type="number" min="1" value="1" required class="form-control" id="quantity"
                            placeholder="Quantity">
                 </div>
 
-                <label for="webSite" class="col-sm-1 control-label">Price</label>
+                <label for="webSite" class="col-sm-1 control-label">Precio</label>
                 <div class="col-sm-2">
                     <input type="number" min="1" disabled required class="form-control" id="price"
                            placeholder="Quantity">
@@ -53,10 +53,10 @@
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-8">
                     <button type="submit" class="btn btn-primary waves-effect waves-light">
-                        Add Dish
+                        Añadir Plato
                     </button>
                     <button type="reset" class="btn btn-default waves-effect waves-light m-l-5">
-                        Cancel
+                        Cancelar
                     </button>
                 </div>
             </div>
@@ -67,11 +67,11 @@
         <table class="table table-responsive">
             <thead>
             <tr>
-                <th style="border: 1px solid black">Dish Name</th>
-                <th width="10%" style="border: 1px solid black">Type</th>
-                <th style="border: 1px solid black">Q</th>
-                <th style="border: 1px solid black">Price</th>
-                <th width="5%" style="border: 1px solid black">Action</th>
+                <th style="border: 1px solid black">Nombre del Plato</th>
+                <th width="10%" style="border: 1px solid black">Tipo</th>
+                <th style="border: 1px solid black">Cantidad</th>
+                <th style="border: 1px solid black">Precio</th>
+                <th width="5%" style="border: 1px solid black">Acciones</th>
             </tr>
             </thead>
             <tbody id="orderDetails">
