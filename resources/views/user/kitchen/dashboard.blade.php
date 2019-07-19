@@ -73,12 +73,12 @@
                                 (dish.status == 0) ?
                                     $("<button>", {
                                         class: "btn btn-block btn-lg btn-primary waves-effect waves-light",
-                                        text: "Let's Cook",
+                                        text: "Cocinando",
                                         onClick: "$(this).letsCook(" + dish.id + ")"
                                     })
                                     : $("<button>", {
                                     class: "btn btn-block btn-lg btn-primary waves-effect waves-light",
-                                    text: "Click To Complete",
+                                    text: "Haga clic para Completar",
                                     onClick: "$(this).completeCooking(" + dish.id + ")"
                                 })
                             )

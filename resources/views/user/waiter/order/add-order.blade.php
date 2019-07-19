@@ -302,7 +302,7 @@
                     $("#orderSummary").append(
                         $("<div>",{class:"form-group"}).append(
                             $("<div>",{class:"col-sm-5"}).append(
-                                $("<button>",{class:"btn btn-success ladda-button",text:"Submit Order",onClick:"$(this).saveOrder()"})
+                                $("<button>",{class:"btn btn-success ladda-button",text:"Enviar Orden",onClick:"$(this).saveOrder()"})
                             )
                         )
                     )
