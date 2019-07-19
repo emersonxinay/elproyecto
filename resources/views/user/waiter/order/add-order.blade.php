@@ -28,7 +28,7 @@
                     <select name="dish" id="dish" required class="form-control">
                         <option value="">Seleccione Uno</option>
                         @foreach($dishes as $dish)
-                            <option value="{{ $dish->id }}">{{$dish->dish}}</option>
+                            <option value="{{$dish->id}}">{{$dish->dish}}</option>
                         @endforeach
                     </select>
                 </div>
@@ -235,7 +235,7 @@
                 }).done(function () {
                     $.Notification.notify('success',
                         'bottom right',
-                        'Success ! Order Has been done successfully');
+                        'El pedido se ha realizado con éxito!');
                     dishList = [];
                     $("#orderDetails").empty();
                     $("#orderSummary").empty();
@@ -274,7 +274,7 @@
 
                     $("#orderSummary").append(
                         $("<div>",{class:"form-group"}).append(
-                            $("<label>",{class:"col-sm-2 control-label",text:"Price inc Vat"}),
+                            $("<label>",{class:"col-sm-2 control-label",text:"Precio incluido"}),
                             $("<div>",{class:"col-sm-5"}).append(
                                 $("<input/>",{class:"form-control",type:"number", value:Math.round(total+(total*vat)/100),disabled:"disabled"})
                             )
@@ -282,7 +282,7 @@
                     )
                     $("#orderSummary").append(
                         $("<div>",{class:"form-group"}).append(
-                            $("<label>",{class:"col-sm-2 control-label",text:"Payment"}),
+                            $("<label>",{class:"col-sm-2 control-label",text:"Pago"}),
                             $("<div>",{class:"col-sm-5"}).append(
                                 $("<input />",{class:"form-control",type:"number", value:"",min:1,
                                     onChange:"$(this).showChange("+total+")",
@@ -293,7 +293,7 @@
                     )
                     $("#orderSummary").append(
                         $("<div>",{class:"form-group"}).append(
-                            $("<label>",{class:"col-sm-2 control-label",text:"Change"}),
+                            $("<label>",{class:"col-sm-2 control-label",text:"Cambio"}),
                             $("<div>",{class:"col-sm-5"}).append(
                                 $("<input/>",{class:"form-control",type:"number", value:"",id:"change_text_field",disabled:"disabled"})
                             )

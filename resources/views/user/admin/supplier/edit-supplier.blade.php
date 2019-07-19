@@ -27,14 +27,14 @@
                                 <label class="col-md-2 control-label">Nombre </label>
                                 <div class="col-md-8">
                                     <input type="text" name="name" class="form-control" value="{{$supplier->name}}"
-                                           placeholder="Supplier Name" parsley-trigger="change" maxlength="50" required>
+                                           placeholder="Nombre" parsley-trigger="change" maxlength="50" required>
 
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-2 control-label" for="example-email">Correo </label>
                                 <div class="col-md-8">
-                                    <input type="email" name="email" class="form-control" placeholder="Supplier Email Address"
+                                    <input type="email" name="email" class="form-control" placeholder="Email"
                                            parsley-trigger="change" maxlength="50" value="{{$supplier->email}}">
 
                                 </div>
@@ -43,7 +43,7 @@
                             <div class="form-group">
                                 <label class="col-md-2 control-label" for="example-email">Telefono </label>
                                 <div class="col-md-8">
-                                    <input type="text" name="phone" class="form-control" placeholder="Supplier Phone"
+                                    <input type="text" name="phone" class="form-control" placeholder="Telefono"
                                            parsley-trigger="change" maxlength="50" required value="{{$supplier->phone}}">
 
                                 </div>
@@ -52,7 +52,7 @@
                             <div class="form-group">
                                 <label class="col-md-2 control-label" for="example-email">Direccion </label>
                                 <div class="col-md-8">
-                                    <textarea name="address" minlength="10" cols="20" rows="5" class="form-control" placeholder="Supplier Address" required>{{$supplier->address}}</textarea>
+                                    <textarea name="address" minlength="10" cols="20" rows="5" class="form-control" placeholder="Direccion" required>{{$supplier->address}}</textarea>
 
                                 </div>
                             </div>

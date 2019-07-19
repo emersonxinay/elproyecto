@@ -38,13 +38,13 @@
                 <label for="webSite" class="col-sm-1 control-label">Cantidad</label>
                 <div class="col-sm-1">
                     <input type="number" min="1" value="1" required class="form-control" id="quantity"
-                           placeholder="Quantity">
+                           placeholder="Cantidad">
                 </div>
 
                 <label for="webSite" class="col-sm-1 control-label">Precio</label>
                 <div class="col-sm-2">
                     <input type="number" min="1" disabled required class="form-control" id="price"
-                           placeholder="Quantity">
+                           placeholder="Precio">
                 </div>
 
             </div>
@@ -242,12 +242,12 @@
                     dishList: dishList
                 }
                 $.post("/update-order/" + id, saveOrder, function (data) {
-                    $.Notification.notify('warning','top right','Please wait..............................');
+                    $.Notification.notify('warning','top right','Por favor espere...');
                 }).done(function (data) {
                     dishList = [];
                     $.Notification.notify('success',
                         'bottom right',
-                        'Success ! Order Has been updated successfully', 'Order Has been updated successfully');
+                        'El pedido se ha realizado con éxito!!', 'El pedido se ha actualizado con éxito');
                     $("#orderDetails").empty();
                     $("#orderSummary").empty();
                     $(this).renderDishList(dishList);
@@ -257,7 +257,7 @@
             //Open Model
             $.fn.deleteDishFromList = function (index) {
                 console.log(dishList[index]);
-                var con = confirm("Are you sure ?");
+                var con = confirm("Estas Seguro?");
                 if (con) {
                     console.log('Confirm' + index);
                     dishList.splice(index, 1);

@@ -16,51 +16,51 @@
 
         //Basic
         $('#sa-basic').click(function () {
-            swal("Here's a message!");
+            swal("Aqui hay un mensaje!");
         });
 
         //A title with a text under
         $('#sa-title').click(function () {
-            swal("Here's a message!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat, tincidunt vitae ipsum et, pellentesque maximus enim. Mauris eleifend ex semper, lobortis purus sed, pharetra felis")
+            swal("Aqui hay un mensaje!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat, tincidunt vitae ipsum et, pellentesque maximus enim. Mauris eleifend ex semper, lobortis purus sed, pharetra felis")
         });
 
         //Success Message
         $('#sa-success').click(function () {
-            swal("Good job!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat, tincidunt vitae ipsum et, pellentesque maximus enim. Mauris eleifend ex semper, lobortis purus sed, pharetra felis", "success")
+            swal("Buen Trabajo", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat, tincidunt vitae ipsum et, pellentesque maximus enim. Mauris eleifend ex semper, lobortis purus sed, pharetra felis", "success")
         });
 
         //Warning Message
         $('#sa-warning').click(function () {
             swal({
-                title: "Are you sure?",
-                text: "You will not be able to recover this imaginary file!",
+                title: "¿Estás seguro?",
+                text: "¡No podrás recuperar este archivo!",
                 type: "warning",
                 showCancelButton: true,
                 confirmButtonClass: 'btn-warning',
-                confirmButtonText: "Yes, delete it!",
+                confirmButtonText: "Si, Borrarlo",
                 closeOnConfirm: false
             }, function () {
-                swal("Deleted!", "Your imaginary file has been deleted.", "success");
+                swal("Eliminado", "Su archivo ah sido Eliminado", "éxito");
             });
         });
 
         //Parameter
         $('#sa-params').click(function () {
             swal({
-                title: "Are you sure?",
-                text: "You will not be able to recover this imaginary file!",
+                title: "¿Estas Seguro?",
+                text: "No podras recuperar este archivo!",
                 type: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Yes, delete it!",
-                cancelButtonText: "No, cancel plx!",
+                confirmButtonText: "Si, borrarlo",
+                cancelButtonText: "No, cancela",
                 closeOnConfirm: false,
                 closeOnCancel: false
             }, function (isConfirm) {
                 if (isConfirm) {
-                    swal("Deleted!", "Your imaginary file has been deleted.", "success");
+                    swal("Eliminado", "Su archivo ha sido Eliminado.", "éxito");
                 } else {
-                    swal("Cancelled", "Your imaginary file is safe :)", "error");
+                    swal("Cancelar", "Tu archivo es Seguro:)", "error");
                 }
             });
         });
@@ -68,8 +68,8 @@
         //Custom Image
         $('#sa-image').click(function () {
             swal({
-                title: "Sweet!",
-                text: "Here's a custom image.",
+                title: "Dulce!",
+                text: "Aqui hay una imagen personalizada.",
                 imageUrl: "assets/plugins/bootstrap-sweetalert/thumbs-up.jpg"
             });
         });
@@ -77,8 +77,8 @@
         //Auto Close Timer
         $('#sa-close').click(function () {
             swal({
-                title: "Auto close alert!",
-                text: "I will close in 2 seconds.",
+                title: "Alerta de Cierre automatico",
+                text: "Cerrara en dos segundos.",
                 timer: 2000,
                 showConfirmButton: false
             });
@@ -87,8 +87,8 @@
         //Primary
         $('#primary-alert').click(function () {
             swal({
-                title: "Are you sure?",
-                text: "You will not be able to recover this imaginary file!",
+                title: "¿Estas seguro?",
+                text: "No podras recuperar este Archivo",
                 type: "info",
                 showCancelButton: true,
                 cancelButtonClass: 'btn-white btn-md waves-effect',
@@ -100,8 +100,8 @@
         //Info
         $('#info-alert').click(function () {
             swal({
-                title: "Are you sure?",
-                text: "You will not be able to recover this imaginary file!",
+                title: "¿Estas Seguro",
+                text: "No podras recuperar este archivo",
                 type: "info",
                 showCancelButton: true,
                 cancelButtonClass: 'btn-white btn-md waves-effect',
@@ -113,8 +113,8 @@
         //Success
         $('#success-alert').click(function () {
             swal({
-                title: "Are you sure?",
-                text: "You will not be able to recover this imaginary file!",
+                title: "¿Estas Seguro?",
+                text: "No podras recuperar este archivo!",
                 type: "success",
                 showCancelButton: true,
                 cancelButtonClass: 'btn-white btn-md waves-effect',
@@ -126,8 +126,8 @@
         //Warning
         $('#warning-alert').click(function () {
             swal({
-                title: "Are you sure?",
-                text: "You will not be able to recover this imaginary file!",
+                title: "¿Estas Seguro?",
+                text: "No podras Recuperar este archivo! ",
                 type: "warning",
                 showCancelButton: true,
                 cancelButtonClass: 'btn-white btn-md waves-effect',
@@ -139,8 +139,8 @@
         //Danger
         $('#danger-alert').click(function () {
             swal({
-                title: "Are you sure?",
-                text: "You will not be able to recover this imaginary file!",
+                title: "¿Estas Seguro?",
+                text: "No podras recuperar este archivo!",
                 type: "error",
                 showCancelButton: true,
                 cancelButtonClass: 'btn-white btn-md waves-effect',

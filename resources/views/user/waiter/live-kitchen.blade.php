@@ -110,7 +110,7 @@
                                 $("<div>", {class: "panel-heading"}).append(
                                     $("<h3>", {
                                         class: "panel-title",
-                                        text: dish.kitchen ? dish.kitchen.name : "Kitchen did not response yet"
+                                        text: dish.kitchen ? dish.kitchen.name : "La cocina no respondió aún"
                                     }).append(
                                         $("<span>", {class: "pull-right", text: dish.served_by.name})
                                     )
@@ -131,23 +131,23 @@
                                     )
                                 ),
                                 $("<div>",{
-                                    text:"Order no :" +dish.id
+                                    text:"Orden nº :" +dish.id
                                 }),
                                 (dish.status == 0)
                                     ? $("<button>", {
                                     class: "btn btn-block btn-lg btn-primary waves-effect waves-light",
-                                    text: "Pending ! Click to cancel order",
+                                    text: "Pendiente, haga clic para cancelar el pedido",
                                     onClick:"$(this).cancelOrder("+ index +")"
                                 })
                                     : (dish.status == 1)
                                     ? $("<button>", {
                                         class: "btn btn-block btn-lg btn-primary waves-effect waves-light",
-                                        text: "Cooking"
+                                        text: "Cocina"
                                     })
                                     : (dish.status == 2)
                                         ? $("<button>", {
                                             class: "btn btn-block btn-lg btn-primary waves-effect waves-light",
-                                            text: "Complete! waiting for serve ",
+                                            text: "Completo! Esperando servicio ",
                                             onClick: "$(this).serve(" + index + ")"
                                         })
                                         : "Oops"

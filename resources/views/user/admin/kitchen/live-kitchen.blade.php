@@ -132,7 +132,7 @@
                                 $("<div>", {class: "panel-heading"}).append(
                                     $("<h3>", {
                                         class: "panel-title",
-                                        text: dish.kitchen ? dish.kitchen.name : "Kitchen did not response yet"
+                                        text: dish.kitchen ? dish.kitchen.name : "La cocina no respondió aún"
                                     }).append(
                                         $("<span>", {class: "pull-right", text: dish.served_by.name})
                                     )
@@ -155,17 +155,17 @@
                                 (dish.status == 0)
                                     ? $("<button>", {
                                             class: "btn btn-block btn-lg btn-primary waves-effect waves-light",
-                                            text: "Pending for kitchen response"
+                                            text: "Pendiente por la respuesta de la cocina"
                                         })
                                     : (dish.status == 1)
                                     ? $("<button>", {
                                             class: "btn btn-block btn-lg btn-primary waves-effect waves-light",
-                                            text: "Cooking"
+                                            text: "Cocina"
                                         })
                                     : (dish.status == 2)
                                         ? $("<button>", {
                                             class: "btn btn-block btn-lg btn-primary waves-effect waves-light",
-                                            text: "Complete! waiting for serve ",
+                                            text: "Completar, esperando el servicio ",
                                             onClick: "$(this).serve(" + index + ")"
                                         })
                                         : "Oops"

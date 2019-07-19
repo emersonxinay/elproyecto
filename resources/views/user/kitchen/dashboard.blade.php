@@ -50,7 +50,7 @@
                                 $("<div>", {class: "panel-heading"}).append(
                                     $("<h3>", {
                                         class: "panel-title",
-                                        text: dish.status == 0 ? "Waiting for Kitchen Response" : "My Kitchen"
+                                        text: dish.status == 0 ? "Esperando la respuesta de la Cocina" : "Mi Cocina"
                                     }).append(
                                         $("<span>", {class: "pull-right", text: dish.served_by.name})
                                     )

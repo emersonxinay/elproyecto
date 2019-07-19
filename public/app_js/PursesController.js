@@ -265,7 +265,7 @@ $(document).ready(function () {
        }).done(function (data) {
            $.Notification.notify('success',
                'bottom right',
-               'Success ! Purses Has been completed successfully');
+               'El Bolso ha sido completado con exito!!');
            purses = [];
            $("#pursesDetailsRender").empty();
            $(this).renderHtml(purses);
