@@ -184,7 +184,7 @@
                     )
                     $("#orderSummary").append(
                         $("<div>",{class:"form-group"}).append(
-                            $("<label>",{class:"col-sm-2 control-label",text:"Payment"}),
+                            $("<label>",{class:"col-sm-2 control-label",text:"Pago"}),
                             $("<div>",{class:"col-sm-5"}).append(
                                 $("<input />",{class:"form-control",type:"number", value:$("#_payment").val(),min:1,
                                     onChange:"$(this).showChange("+total+")",
@@ -195,7 +195,7 @@
                     )
                     $("#orderSummary").append(
                         $("<div>",{class:"form-group"}).append(
-                            $("<label>",{class:"col-sm-2 control-label",text:"Change"}),
+                            $("<label>",{class:"col-sm-2 control-label",text:"Cambio"}),
                             $("<div>",{class:"col-sm-5"}).append(
                                 $("<input/>",{class:"form-control",type:"number", value:change,disabled:"disabled",id:"change_text_field"})
                             )
@@ -205,7 +205,7 @@
                         $("<div>",{class:"form-group"}).append(
                             $("<div>",{class:"col-sm-5"}).append(
                                 $("<button>",{class:"btn btn-success",
-                                    text:"Submit Update Order",
+                                    text:"Actualizar",
                                     onClick:"$(this).saveOrder()"
                                 })
                             )
@@ -276,7 +276,7 @@
                     dish_info = data;
                     $("#dishType").empty();
                     $("#dishType").append(
-                        $("<option>", {text: "Select Dish Type"})
+                        $("<option>", {text: "Seleccione Tipo de Plato"})
                     )
                     $.each(data, function (index, dish_type) {
                         $("#dishType").append(

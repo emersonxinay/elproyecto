@@ -74,9 +74,9 @@
                 e.preventDefault();
                 var formData = new FormData(this);
                 $(this).speedPost('/update-expanse/{{$expanse->id}}', formData, message = {
-                    success: {header: 'Expanse update successfully', body: 'Expanse update successfully'},
-                    error: {header: 'Something went wrong', body: 'Something went wrong'},
-                    warning: {header: 'Internal Server Error', body: 'Internal server error'}
+                    success: {header: 'Actualizado con Exito', body: 'Actualizado con Exito'},
+                    error: {header: 'Algo Salió mal', body: 'Algo salió mal'},
+                    warning: {header: 'Error del Servidor', body: 'Error del Servidor'}
                 });
             });
 

@@ -110,9 +110,9 @@
                 var formData = new FormData(this);
                 var id = $("#itemId").val();
                 $(this).speedPost('/update-item/'+id, formData, message = {
-                    success: {header: 'Item updated successfully', body: 'Item updated successfully'},
-                    error: {header: 'Item already exist', body: 'Item found'},
-                    warning: {header: 'Internal Server Error', body: 'Internal server error'}
+                    success: {header: 'Actualizado con Exito', body: 'Actualizado con Exito'},
+                    error: {header: 'Ya Existe', body: 'Ya Existe'},
+                    warning: {header: 'Server Error', body: 'server error'}
                 });
             });
         });

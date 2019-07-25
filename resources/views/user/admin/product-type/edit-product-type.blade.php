@@ -73,9 +73,9 @@
                 e.preventDefault();
                 var formData = new FormData(this);
                 $(this).speedPost('/update-product-type/{{$product_type->id}}',formData,message = {
-                    success: {header: 'Product Type update successfully', body: 'Product Type update successfully'},
-                    error: {header: 'Product Type already exist', body: 'Product Type  found'},
-                    warning: {header: 'Internal Server Error', body: 'Internal server error'}
+                    success: {header: 'Tipo de Producto Actualizado con Exito', body: 'Tipo de Producto Actualizado con Exito'},
+                    error: {header: 'El tipo de Producto ya Existe', body: 'Tipo de Producto Encontrado'},
+                    warning: {header: 'Error de Servidor', body: 'Error de Servidor'}
                 });
             })
         })

@@ -108,9 +108,9 @@
                var formData = new FormData(this);
                var id = $("#dishId").val();
                $(this).speedPost('/update-dish/'+id, formData, message = {
-                   success: {header: 'Dish Update successfully', body: 'Dish updated successfully'},
-                   error: {header: 'Dish  already exist', body: 'Dish  found'},
-                   warning: {header: 'Internal Server Error', body: 'Internal server error'}
+                   success: {header: 'Actualizacion del Plato', body: 'Actualizacion Con Exito'},
+                   error: {header: 'Plato ya Existe', body: 'Plato Encontrado'},
+                   warning: {header: 'Error del Servidor', body: 'Error del Servidor'}
                });
            })
         });

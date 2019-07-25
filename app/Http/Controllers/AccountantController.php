@@ -109,7 +109,7 @@ class AccountantController extends Controller
         $expanse =  OfficeExpanse::findOrFail($id);
         if($expanse){
             $expanse->delete();
-            return redirect()->back()->with('delete_success','Expanse has been deleted');
+            return redirect()->back()->with('Eliminado','Se Elimino con Exito');
         }
     }
 }

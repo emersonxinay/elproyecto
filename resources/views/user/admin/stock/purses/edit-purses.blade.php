@@ -148,7 +148,7 @@
                                 <th colspan="5"></th>
                                 <th class="text-right">Pago Total :</th>
                                 <th>{{config('restaurant.currency.symbol') }} {{number_format($pursesPaymentPrice,2,'.',',') }} {{config('restaurant.currency.currency')}}</th>
-                                <th>{{count($purses->pursesPayments)}} Payment</th>
+                                <th>{{count($purses->pursesPayments)}} Pago</th>
                             </tr>
                             @if($pursesPrice - $pursesPaymentPrice == 0)
                                 <tr>

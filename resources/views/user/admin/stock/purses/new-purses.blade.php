@@ -24,7 +24,7 @@
 
 
                             <div class="form-group">
-                                {{--<label for="" class="col-md-2 control-label">Purses Id</label>--}}
+                                {{--<label for="" class="col-md-2 control-label">Bolso Id</label>--}}
                                 {{--<div class="col-md-2">--}}
                                 {{--<input type="text" name="purses_id" value="2541" class="form-control">--}}
                                 {{--</div>--}}

@@ -108,9 +108,9 @@
                 e.preventDefault();
                 var formData = new FormData(this);
                 $(this).speedPost('/save-item', formData, message = {
-                    success: {header: 'Item saved successfully', body: 'Item saved successfully'},
-                    error: {header: 'Item already exist', body: 'Item found'},
-                    warning: {header: 'Internal Server Error', body: 'Internal server error'}
+                    success: {header: 'Guardado con Exito', body: 'Guardado con Exito'},
+                    error: {header: 'El produto ya Existe', body: 'El Producto ya Existe'},
+                    warning: {header: 'Error del Servidor', body: 'Error del Servidor'}
                 },addItemForm);
             });
 

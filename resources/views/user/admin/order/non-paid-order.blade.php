@@ -50,7 +50,7 @@
                 ?>
                 <tr>
                     <td>{{str_pad($order->id,4,0,STR_PAD_LEFT)}}</td>
-                    <td>{{$order->table ? $order->table->table_no : "Table not selected"}}</td>
+                    <td>{{$order->table ? $order->table->table_no : "Mesa no Seleccionada"}}</td>
                     <td>{{$order->servedBy->name}}</td>
                     <td>
                         {{config('restaurant.currency.symbol')}} {{number_format($orderSum,2)}} {{config('restaurant.currency.currency')}}

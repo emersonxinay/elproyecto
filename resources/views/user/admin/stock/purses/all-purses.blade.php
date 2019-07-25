@@ -56,9 +56,9 @@
                     <td>{{$purse->supplier->name}} </td>
                     <td>
                         @if($pursesValue-$pursesPayment <= 0)
-                            Paid
+                            Pagado
                             @else
-                            Not Paid
+                            No Pagado
                         @endif
 
                     </td>

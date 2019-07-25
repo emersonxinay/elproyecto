@@ -32,21 +32,21 @@
     </div>
     <div class="card-box">
         @foreach($orders as $od)
-            <h3>{{$od[0]->created_at->format('M-Y')}} - <small>Total Earn</small> : {{config('restaurant.currency.symbol')}} {{number_format($od->sum('payment'),2)}} {{config('restaurant.currency.currency')}}</h3>
+            <h3>{{$od[0]->created_at->format('M-Y')}} - <small>Ganancia Total</small> : {{config('restaurant.currency.symbol')}} {{number_format($od->sum('payment'),2)}} {{config('restaurant.currency.currency')}}</h3>
             <div class="table-responsive">
                 <table id=""
                        class="table datatable-responsive table-striped table-bordered dt-responsive nowrap" cellspacing="0"
                        width="100%">
                     <thead>
                     <tr>
-                        <th>Order Id</th>
-                        <th>Table id</th>
-                        <th>Value</th>
-                        <th>Value with vat</th>
-                        <th>Payment</th>
-                        <th>Change</th>
-                        <th>Vat</th>
-                        <th>Date</th>
+                        <th>Orden Id</th>
+                        <th>Mesa id</th>
+                        <th>Valor</th>
+                        <th>Valor con IVA</th>
+                        <th>Pago</th>
+                        <th>Cambio</th>
+                        <th>%</th>
+                        <th>Fecha</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -80,6 +80,9 @@
     <script>
         $(document).ready(function () {
             $(".datatable-responsive").DataTable({
+                "language": {
+                  "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                },
                 order: [0, 'desc'],
                 dom: 'Bfrtip',
                 buttons: [

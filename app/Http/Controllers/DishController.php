@@ -71,12 +71,13 @@ class DishController extends Controller
             DishPrice::where('dish_id', $dish->id)->delete();
             DishInfo::where('dish_id', $dish->id)->delete();
             $dish->delete();
-            return redirect()->back()->with('delete_success', 'Dish has been delete successfully ..');
+            return redirect()->back()->with('Eliminado', 'El Plato fue Eliminado.');
         } else {
             return redirect()
                 ->back()
-                ->with('delete_error',
-                    'Dish cannot delete ! This dish has been used in order. If you dont want to show this dish anymore you can simply de-active this dish');
+                ->with('Error',
+                    '
+                    ¡El plato no se puede borrar! Este plato se ha utilizado en orden. Si ya no quiere mostrar este plato, simplemente puede desactivar este plato.');
         }
     }
 
@@ -227,7 +228,7 @@ class DishController extends Controller
     {
         $dish_image = DishInfo::findOrFail($id);
         if ($dish_image->delete()) {
-            return redirect()->back()->with('delete_success', 'Dish Image has been delete successfully....');
+            return redirect()->back()->with('Eliminado', 'La Imagen del Plato se Elimino con Exito...');
         }
     }
 

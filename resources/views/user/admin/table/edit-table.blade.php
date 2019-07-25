@@ -82,9 +82,9 @@
                 var formData = new FormData(this);
                 var id = $("#tableId").val();
                 $(this).speedPost('/update-table/'+id, formData, message = {
-                    success: {header: 'Table update successfully', body: 'Table update successfully'},
-                    error: {header: 'Table already exist', body: 'Table found'},
-                    warning: {header: 'Internal Server Error', body: 'Internal server error'}
+                    success: {header: 'Mesa Actualizada con Exito', body: 'Mesa Actualizada con Exito'},
+                    error: {header: 'Mesa ya Existe', body: 'Mesa ya Existe'},
+                    warning: {header: 'Error del Servidor', body: 'Error del Servidor'}
                 });
             })
         })

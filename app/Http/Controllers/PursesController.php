@@ -188,7 +188,7 @@ class PursesController extends Controller
     public function deletePursesProduct($id)
     {
         PursesProduct::destroy($id);
-        return redirect()->back()->with('delete_success','Purses product has been deleted successfully');
+        return redirect()->back()->with('Eliminado','Se Elimino con Exito');
     }
 
     /**
@@ -223,9 +223,9 @@ class PursesController extends Controller
         PursesProduct::where('purse_id',$purses->id)->delete();
         PursesPayment::where('purse_id',$purses->id)->delete();
         if($purses->delete()){
-            return redirect()->back()->with('delete_success','Purses has been deleted successfully');
+            return redirect()->back()->with('Eliminado','Se Elimino con Exito');
         }else{
-            return redirect()->back()->with('delete_error','Purses cannot delete');
+            return redirect()->back()->with('Error al Eliminar','No se Pudo Eliminar');
         }
     }
 

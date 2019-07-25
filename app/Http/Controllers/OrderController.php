@@ -229,7 +229,7 @@ class OrderController extends Controller
         CookedProduct::where('order_id',$order->id)->delete();
         if($order->delete()){
             broadcast(new OrderCancel('orderCancel'))->toOthers();
-            return redirect()->back()->with('delete_success','The order has been deleted successfully');
+            return redirect()->back()->with('Eliminado','La Orden se Elimino con Exito');
         }
 
     }

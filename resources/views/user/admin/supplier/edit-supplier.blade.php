@@ -97,9 +97,9 @@
                 var formData = new FormData(this);
                 var id= $("#supplierId").val();
                 $(this).speedPost('/update-supplier/'+id, formData, message = {
-                    success: {header: 'Supplier update successfully', body: 'Supplier update successfully'},
-                    error: {header: 'Supplier already exist', body: 'Supplier found'},
-                    warning: {header: 'Internal Server Error', body: 'Internal server error'}
+                    success: {header: 'Actualizacion con Exito', body: 'Actualizacion con Exito'},
+                    error: {header: 'El Proveedor ya Existe', body: 'El Proveedor ya Existe'},
+                    warning: {header: 'Error del Servidor', body: 'Error del Servidor'}
                 });
             });
         });

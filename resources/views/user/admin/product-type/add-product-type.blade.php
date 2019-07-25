@@ -61,9 +61,9 @@
                 e.preventDefault();
                 var formData = new FormData(this);
                 $(this).speedPost('/save-product-type',formData,message = {
-                    success: {header: 'Product Type saved successfully', body: 'Product Type saved successfully'},
-                    error: {header: 'Product Type already exist', body: 'Product Type  found'},
-                    warning: {header: 'Internal Server Error', body: 'Internal server error'}
+                    success: {header: 'Tipo de Producto Guardado con Exito', body: 'Tipo de Producto Guardado con Exito'},
+                    error: {header: 'El tipo de Producto ya Existe', body: 'Tipo de Producto ya Encontrado'},
+                    warning: {header: 'Error del servidor', body: 'Error del Servidor '}
                 },$("#unitForm"));
             })
         })

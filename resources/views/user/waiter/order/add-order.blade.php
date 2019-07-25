@@ -131,7 +131,7 @@
                     dish_info = data;
                     $("#dishType").empty();
                     $("#dishType").append(
-                        $("<option>", {text: "Select Dish Type"})
+                        $("<option>", {text: "Seleccione Tipo de Plato"})
                     );
 
                     $.each(data, function (index, dish_type) {

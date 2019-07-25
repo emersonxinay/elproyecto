@@ -187,7 +187,7 @@ $(document).ready(function () {
                 ),
                 $("<tr>").append(
                     $("<th>",{colspan:5}),
-                    $("<th>", {text: "Payment :",class:"text-right"}),
+                    $("<th>", {text: "Pago :",class:"text-right"}),
                     $("<input/>",{type:"number",
                         value:"0", min:"0", style:"width: 120px",class:"form-control",
                         id:"payment",
@@ -198,13 +198,13 @@ $(document).ready(function () {
                 ),
                 $("<tr>").append(
                     $("<th>",{colspan:5}),
-                    $("<th>", {text: "Due :",class:"text-right"}),
+                    $("<th>", {text: "Cambio :",class:"text-right"}),
                     $("<th>", {text: total,id:"due"})
                 ),
                 $("<tr>").append(
                     $("<th>",{colspan:6}),
                     $("<th>").append(
-                        $("<button>",{text:"Confirm Purses",class:"btn btn-purple",onClick:'$(this).confirmPurses()'})
+                        $("<button>",{text:"Confirmar",class:"btn btn-purple",onClick:'$(this).confirmPurses()'})
                     )
                 )
             )

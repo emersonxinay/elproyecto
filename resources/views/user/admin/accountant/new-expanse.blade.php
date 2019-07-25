@@ -74,9 +74,9 @@
                 e.preventDefault();
                 var formData = new FormData(this);
                 $(this).speedPost('/save-expanse', formData, message = {
-                    success: {header: 'New Expanse saved successfully', body: 'New Expanse saved successfully'},
-                    error: {header: 'Something went wrong', body: 'Something went wrong'},
-                    warning: {header: 'Internal Server Error', body: 'Internal server error'}
+                    success: {header: 'Guardado con Exito', body: 'Guardado con Exito'},
+                    error: {header: 'Algo Salió mal', body: 'Algo Salió mal'},
+                    warning: {header: 'Error del Servidor', body: 'Error del Servidor'}
                 },expanseForm);
             });
 

@@ -79,9 +79,9 @@
                 var formData = new FormData(this);
                 var addTableForm = $("#addTable");
                 $(this).speedPost('/save-table', formData, message = {
-                    success: {header: 'Table Saved successfully', body: 'Table Saved successfully'},
-                    error: {header: 'Table already exist', body: 'Table found'},
-                    warning: {header: 'Internal Server Error', body: 'Internal server error'}
+                    success: {header: 'Mesa Guardada con Exito', body: 'Mesa Guardada con Exito'},
+                    error: {header: 'Mesa ya Existe', body: 'Mesa Encontrada'},
+                    warning: {header: 'Error del Servidor', body: 'Error del Servidor'}
                 },addTableForm);
             })
         })

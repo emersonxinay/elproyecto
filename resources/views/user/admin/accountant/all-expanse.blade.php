@@ -47,11 +47,11 @@
                 </small> {{config('restaurant.currency.symbol')}} {{number_format($expanse->sum('expanse')+$purses_cost ,2)}}  {{config('restaurant.currency.currency')}}
             </h3>
             <h4>
-                Office Expanse :
+                Gasto Diario :
                 {{config('restaurant.currency.symbol')}}
                 {{number_format($expanse->sum('expanse') ,2)}}
                 {{config('restaurant.currency.currency')}} |
-                Purses expanse :
+                Gastos Pasados:
                 {{config('restaurant.currency.symbol')}}
                 {{number_format($purses_cost ,2)}}
                 {{config('restaurant.currency.currency')}}
