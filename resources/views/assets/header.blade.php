@@ -6,7 +6,7 @@
         <div class="text-center">
             <a href="{{url('/')}}" class="logo">
                 <i class="icon-c-logo my-logo">R</i>
-                <span class="my-logo">Restaurante Pepita</span>
+                <span class="my-logo">ImagiFood</span>
             </a>
             <!-- Image Logo here -->
             {{--<a href="{{url('/')}}" class="logo">--}}
