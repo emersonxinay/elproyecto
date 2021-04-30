@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Routing\UrlGenerator;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
@@ -21,11 +22,19 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(UrlGenerator $url)
     {
         //
-
+        if (env('REDIRECT_HTTPS')) {
+            $url->formatScheme('https://');
+        }
         parent::boot();
+    }
+    public function register()
+    {
+       if (env('REDIRECT_HTTPS')) {
+           $this->app['request']->server->set('HTTPS', true);
+       }
     }
 
     /**
@@ -70,4 +79,5 @@ class RouteServiceProvider extends ServiceProvider
              ->namespace($this->namespace)
              ->group(base_path('routes/api.php'));
     }
+    
 }
