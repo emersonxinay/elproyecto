@@ -17,7 +17,7 @@
 }
 
 .navbar-default{
-    background-color:orangered;
+    background-color:blue;
 }
 .account-pages{
     background-image: url("../../../img_assets/login.jpg");
@@ -29,7 +29,7 @@
 
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
     color: #fff;
-    background-color: orangered;
+    background-color: rgb(17, 131, 207);
 }
 #sidebar-menu > ul > li > a:hover{
     color: orangered;

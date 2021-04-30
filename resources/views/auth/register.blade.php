@@ -73,13 +73,20 @@
         {{--</div>--}}
     {{--</div>--}}
 {{--</div>--}}
-
+    <style>
+        .btn-orange{
+            background-color: orangered!important;
+        }
+        .text-orange{
+            color: purple!important;
+        }
+    </style>
 <div class="account-pages"></div>
 <div class="clearfix"></div>
 <div class="wrapper-page">
     <div class=" card-box">
         <div class="panel-heading">
-            <h3 class="text-center"> Registrar Administrador </h3>
+            <h3 class="text-center"> Registrar Administrador <br> <strong class="text-orange ">Hazuki Sushi</strong> </h3>
         </div>
 
 

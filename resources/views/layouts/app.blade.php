@@ -59,7 +59,7 @@
 </div>
 
 <footer class="footer">
-    Copyright © 2015-<?php echo date("Y"); ?> <a href="https://www.imaginaticsperu.com" target="_blank">Imaginatics Peru.</a> Todos los derechos reservados.
+    Copyright © <?php echo date("Y"); ?> <a href="https://www.hazukisushi.cl" target="_blank">Hazuki Sushi.</a> Todos los derechos reservados.
 </footer>
 </body>
 </html>

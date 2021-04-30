@@ -5,8 +5,8 @@
     <div class="topbar-left">
         <div class="text-center">
             <a href="{{url('/')}}" class="logo">
-                <i class="icon-c-logo my-logo">R</i>
-                <span class="my-logo">ImagiFood</span>
+                <i class="icon-c-logo ">Hazuki</i>
+                <span class="">Hazuki Sushi</span>
             </a>
             <!-- Image Logo here -->
             {{--<a href="{{url('/')}}" class="logo">--}}
@@ -17,7 +17,7 @@
     </div>
 
     <!-- Button mobile view to collapse sidebar menu -->
-    <div class="navbar navbar-default" role="navigation">
+    <div class="navbar navbar-default "  role="navigation">
         <div class="container">
             <div class="">
                 <div class="pull-left">

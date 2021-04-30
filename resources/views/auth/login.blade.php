@@ -7,7 +7,7 @@
             background-color: orangered!important;
         }
         .text-orange{
-            color: orangered!important;
+            color: purple!important;
         }
     </style>
 
@@ -16,7 +16,7 @@
 <div class="wrapper-page">
     <div class=" card-box">
         <div class="panel-heading">
-            <h3 class="text-center"> Ingresa a <strong class="text-orange my-logo">ImagiFood</strong> </h3>
+            <h3 class="text-center"> Ingresa a <strong class="text-orange ">Hazuki Sushi</strong> </h3>
             {{--{{request()->getHttpHost()}}--}}
             {{--{{request()->getHost()}}--}}
         </div>
@@ -61,7 +61,7 @@
 
                 <div class="form-group text-center m-t-40">
                     <div class="col-xs-12">
-                        <button class="btn btn-pink btn-orange btn-block text-uppercase waves-effect waves-light" type="submit">Ingresar</button>
+                        <button class="btn btn-success btn-success btn-block text-uppercase waves-effect waves-light" type="submit">Ingresar</button>
                     </div>
                 </div>
 
