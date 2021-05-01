@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>@yield('title',config('app.name'))</title>
+    <link rel="icon" href="{{ asset('img_assets/favicon-96x96.png') }}">
 
 
     {{--include css--}}

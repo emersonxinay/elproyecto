@@ -4,12 +4,12 @@
     <!-- LOGO -->
     <div class="topbar-left">
         <div class="text-center">
-            <a href="{{url('/')}}" class="logo">
+            <a href="{{url('/home')}}" class="logo">
                 <i class="icon-c-logo ">Hazuki</i>
                 <span class="">Hazuki Sushi</span>
             </a>
             <!-- Image Logo here -->
-            {{--<a href="{{url('/')}}" class="logo">--}}
+            {{--<a href="{{url('/home')}}" class="logo">--}}
             {{--<i class="icon-c-logo"> <img src="http://via.placeholder.com/350x150" height="42"/> </i>--}}
             {{--<span><img src="http://via.placeholder.com/350x150" height="20"/></span>--}}
             {{--</a>--}}
